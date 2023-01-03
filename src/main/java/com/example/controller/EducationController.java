@@ -18,11 +18,6 @@ public class EducationController {
 	@Autowired
 	private EducationService eduService;
 	
-	@RequestMapping("/{step}")
-	public String viewPage(@PathVariable String step) {
-		return "academy/"+ step;
-	}
-	
 	@RequestMapping("/course-sidebar")
 	public void getBoardList(Model m) {
 		EducationVO vo = new EducationVO();
@@ -33,9 +28,9 @@ public class EducationController {
 		m.addAttribute("academyList", list);
 	}
 	
-	@RequestMapping("/getBoard")
+	@RequestMapping("/course-details")
 	public void getBoard(EducationVO vo, Model model) {
-		model.addAttribute("board", eduService.getBoard(vo)); // Model 정보 저장			
+		model.addAttribute("education", eduService.getBoard(vo)); // Model 정보 저장			
 	}
 
 }

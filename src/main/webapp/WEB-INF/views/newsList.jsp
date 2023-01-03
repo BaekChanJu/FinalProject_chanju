@@ -1,9 +1,10 @@
 <!doctype html>
 <html class="no-js" lang="zxx">
    <head>
+      <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
       <meta charset="utf-8">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
-      <title>Educal – Online Learning and Education HTML5 Template </title>
+      <title>NEWS </title>
       <meta name="description" content="">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <!-- Place favicon.ico in the root directory -->
@@ -32,7 +33,7 @@
       <!-- pre loader area start -->
       <div id="loading">
          <div id="loading-center">
-            <div id="loading-center-absolute">
+            <div id="loading-center-absolute">  
                <div class="loading-content">
                   <img class="loading-logo-text" src="assets/img/logo/logo-text-2.png" alt="">
                   <div class="loading-stroke">
@@ -54,14 +55,15 @@
 
       <!-- header area start -->
       <header>
-         <div id="header-sticky" class="header__area header__padding-2 header__shadow">
-            <div class="container">
+         <div id="header-sticky" class="header__area header__transparent header__padding header__white">
+            <div class="container-fluid">
                <div class="row align-items-center">
                   <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-2 col-sm-4 col-6">
                      <div class="header__left d-flex">
                         <div class="logo">
                            <a href="index">
-                              <img src="assets/img/logo/logo.png" alt="logo">
+                              <img class="logo-white" src="assets/img/logo/logo-2.png" alt="logo">
+                              <img class="logo-black" src="assets/img/logo/logo.png" alt="logo">
                            </a>
                         </div>
                         <div class="header__category d-none d-lg-block">
@@ -103,7 +105,7 @@
                   </div>
                   <div class="col-xxl-9 col-xl-9 col-lg-8 col-md-10 col-sm-8 col-6">
                      <div class="header__right d-flex justify-content-end align-items-center">
-                        <div class="main-menu main-menu-2">
+                        <div class="main-menu main-menu-3">
                            <nav id="mobile-menu">
                               <ul>
                                  <li class="has-dropdown">
@@ -149,8 +151,26 @@
                               </ul>
                            </nav>
                         </div>
-                        <div class="header__btn header__btn-2 ml-50 d-none d-sm-block">
-                           <a href="sign-up" class="e-btn">Sign up</a>
+                        <div class="header__search p-relative ml-50 d-none d-md-block">
+                           <form action="#">
+                              <input type="text" placeholder="Search...">
+                              <button type="submit"><i class="fad fa-search"></i></button>
+                           </form>
+                           <div class="header__cart">
+                              <a href="javascript:void(0);" class="cart-toggle-btn">
+                                 <div class="header__cart-icon">
+                                    <svg viewBox="0 0 24 24">
+                                       <circle class="st0" cx="9" cy="21" r="1"/>
+                                       <circle class="st0" cx="20" cy="21" r="1"/>
+                                       <path class="st0" d="M1,1h4l2.7,13.4c0.2,1,1,1.6,2,1.6h9.7c1,0,1.8-0.7,2-1.6L23,6H6"/>
+                                    </svg>
+                                 </div>
+                                 <span class="cart-item">2</span>
+                              </a>
+                           </div>
+                        </div>
+                        <div class="header__btn ml-20 d-none d-sm-block">
+                           <a href="contact" class="e-btn">Try for free</a>
                         </div>
                         <div class="sidebar__menu d-xl-none">
                            <div class="sidebar-toggle-btn ml-30" id="sidebar-toggle">
@@ -298,49 +318,20 @@
       <!-- sidebar area end -->
 
       <main>
-
+         <!-- 수정시작하는부분 : 뉴스리스트-->
          <!-- page title area start -->
-         <section class="page__title-area pt-120">
-            <div class="page__title-shape">
-               <img class="page-title-shape-5 d-none d-sm-block" src="assets/img/page-title/page-title-shape-1.png" alt="">
-               <img class="page-title-shape-6" src="assets/img/page-title/page-title-shape-2.png" alt="">
-               <img class="page-title-shape-7" src="assets/img/page-title/page-title-shape-4.png" alt="">
-               <img class="page-title-shape-8" src="assets/img/page-title/page-title-shape-5.png" alt="">
-            </div>
+         <section class="page__title-area page__title-height page__title-overlay d-flex align-items-center" data-background="assets/img/page-title/page-title.jpg">
             <div class="container">
                <div class="row">
-                  <div class="col-xxl-9 col-xl-8">
-                     <div class="page__title-content mb-25 pr-40">
-                        <div class="page__title-breadcrumb">                            
-                            <nav aria-label="breadcrumb">
-                              <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="index">Home</a></li>
-                                <li class="breadcrumb-item"><a href="course-grid">Event</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Become a product Manager learn the skills & job.</li>
-                              </ol>
-                            </nav>
-                        </div>
-                        <span class="page__title-pre purple-bg">Art & Design</span>
-                        <h5 class="page__title-3">Become a product manager learn the Skills & job.</h5>
-                     </div>
-                     <div class="course__meta-2 d-sm-flex mb-30">
-                        <div class="course__teacher-3 d-flex align-items-center mr-70 mb-30">
-                           <div class="course__teacher-thumb-3 mr-15">
-                              <img src="assets/img/course/teacher/teacher-1.jpg" alt="">
-                           </div>
-                           <div class="course__teacher-info-3">
-                              <h5>Teacher</h5>
-                              <p><a href="#">Elon Gated</a></p>
-                           </div>
-                        </div>
-                        <div class="course__update mr-80 mb-30">
-                           <h5>Last Update:</h5>
-                           <p>July 24, 2022</p>
-                        </div>
-                        <div class="course__update mb-30">
-                           <h5>Location:</h5>
-                           <p>New York, TX 82760, US:</p>
-                        </div>
+                  <div class="col-xxl-12">
+                     <div class="page__title-wrapper mt-110">
+                        <h3 class="page__title">뉴스</h3>                         
+                        <nav aria-label="breadcrumb">
+                           <ol class="breadcrumb">
+                              <li class="breadcrumb-item"><a href="index">main</a></li>
+                              <li class="breadcrumb-item active" aria-current="page">뉴스</li>
+                           </ol>
+                        </nav>
                      </div>
                   </div>
                </div>
@@ -348,148 +339,216 @@
          </section>
          <!-- page title area end -->
 
-         <!-- event details area start -->
-         <section class="event__area pb-110">
+         <!-- course area start -->
+         <section class="course__area pt-120 pb-120">
             <div class="container">
-               <div class="row">
-                  <div class="col-xxl-8 col-xl-8 col-lg-8">
-                     <div class="events__wrapper">
-                        <div class="events__thumb mb-35 w-img">
-                           <img src="assets/img/events/event-1.jpg" alt="">
-                        </div>
-                        <div class="events__details mb-35">
-                           <h3>Description</h3>
-                           <p>He legged it up the kyver have it mush super me old mucker cheeky naff that are you taking the piss, blow off down the pub bite your arm off the wireless boot cor blimey guvnor happy days bender what a load of rubbish, say pardon me horse play spiffing Why car boot gosh bubble and squeak. Cheers Richard bugger show off show off pick your nose and blow off get stuffed mate chancer in my flat loo, bevvy amongst hunky-dory bender bubble and squeak me old mucker vagabond, barmy spend a penny chimney pot young delinquent bum bag the bee's knees chap, gosh nice one knees up the wireless Charles such a fibber. Mush barmy bleeding Jeffrey pardon me barney grub loo cup of tea bubble and squeak bugger all mate say, I bloke matie boy tickety-boo give us a bell up the duff bugger lurgy wind up I don't want no agro.</p>
-                        </div>
-                        <div class="events__allow mb-40">
-                           <h3>This event will allow participants to:</h3>
-                           <ul>
-                              <li><i class="fal fa-check"></i> Business's managers, leaders</li>
-                              <li><i class="fal fa-check"></i> Downloadable lectures, code and design assets for all projects</li>
-                              <li><i class="fal fa-check"></i> Anyone who is finding a chance to get the promotion</li>
-                           </ul>
-                        </div>
-                        <div class="events__tag">
-                           <span><i class="fal fa-tag"></i></span>
-                           <a href="#">Big data,  </a>
-                           <a href="#">Data analysis,</a>
-                           <a href="#">Data modeling</a>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-xxl-4 col-xl-4 col-lg-4">
-                     <div class="events__sidebar pl-70">
-                        <div class="events__sidebar-widget white-bg mb-20">
-                           <div class="events__sidebar-shape">
-                              <img class="events-sidebar-img-2" src="assets/img/events/event-shape-2.png" alt="">
-                              <img class="events-sidebar-img-3" src="assets/img/events/event-shape-3.png" alt="">
-                           </div>
-                           <div class="events__info">
-                              <div class="events__info-meta mb-25 d-flex align-items-center justify-content-between">
-                                 <div class="events__info-price">
-                                    <h5>$76.<span>00</span> </h5>
-                                    <h5 class="old-price">$142.00</h5>
-                                 </div>
-                                 <div class="events__info-discount">
-                                    <span>68% OFF</span>
-                                 </div>
-                              </div>
-                              <div class="events__info-content mb-35">
-                                 <ul>
-                                    <li class="d-flex align-items-center">
-                                       <div class="events__info-icon">
-                                          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
-                                             <path class="st0" d="M2,6l6-4.7L14,6v7.3c0,0.7-0.6,1.3-1.3,1.3H3.3c-0.7,0-1.3-0.6-1.3-1.3V6z"/>
-                                             <polyline class="st0" points="6,14.7 6,8 10,8 10,14.7 "/>
-                                          </svg>
-                                       </div>
-                                       <div class="events__info-item">
-                                          <h5><span>End: </span> July 26, 2022 12:30 am</h5>
-                                       </div>
-                                    </li>
-                                    <li class="d-flex align-items-center">
-                                       <div class="events__info-icon">
-                                          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
-                                             <path class="st0" d="M2,6l6-4.7L14,6v7.3c0,0.7-0.6,1.3-1.3,1.3H3.3c-0.7,0-1.3-0.6-1.3-1.3V6z"/>
-                                             <polyline class="st0" points="6,14.7 6,8 10,8 10,14.7 "/>
-                                          </svg>
-                                       </div>
-                                       <div class="events__info-item">
-                                          <h5><span>Time:</span>  10:45 AM-01:30 PM</h5>
-                                       </div>
-                                    </li>
-                                    <li class="d-flex align-items-center">
-                                       <div class="events__info-icon">
-                                          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
-                                             <path class="st0" d="M2,6l6-4.7L14,6v7.3c0,0.7-0.6,1.3-1.3,1.3H3.3c-0.7,0-1.3-0.6-1.3-1.3V6z"/>
-                                             <polyline class="st0" points="6,14.7 6,8 10,8 10,14.7 "/>
-                                          </svg>
-                                       </div>
-                                       <div class="events__info-item">
-                                          <h5><span>Venue: </span> New York, TX 82760, US</h5>
-                                       </div>
-                                    </li>
-                                 </ul>
-                              </div>
-                              <div class="events__join-btn">
-                                 <a href="contact" class="e-btn e-btn-7 w-100">Enroll <i class="far fa-arrow-right"></i></a>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="events__sidebar-widget white-bg">
-                           <div class="events__sponsor">
-                              <h3 class="events__sponsor-title">Sponsors</h3>
-                              <div class="events__sponsor-thumb mb-35">
-                                 <img src="assets/img/events/sponsor-logo.png" alt="">
-                              </div>
-                              <div class="events__sponsor-info">
-                                 <h3>Thomas R. Toe</h3>
-                                 <h4>Email: <span>support@educal.com</span></h4>
-                                 <div class="events__social d-xl-flex align-items-center">
-                                    <h4>Share:</h4>
-                                    <ul>
-                                       <li><a href="#" class="fb" ><i class="social_facebook"></i></a></li>
-                                       <li><a href="#" class="tw" ><i class="social_twitter"></i></a></li>
-                                       <li><a href="#" class="pin" ><i class="social_pinterest"></i></a></li>
-                                    </ul>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </section>
-         <!-- event details area end -->
-
-         <!-- cta area start -->
-         <section class="cta__area mb--120">
-            <div class="container">
-               <div class="cta__inner blue-bg fix">
-                  <div class="cta__shape">
-                     <img src="assets/img/cta/cta-shape.png" alt="">
-                  </div>
+               <div class="course__tab-inner grey-bg-2 mb-50">
                   <div class="row align-items-center">
-                     <div class="col-xxl-7 col-xl-7 col-lg-8 col-md-8">
-                        <div class="cta__content">
-                           <h3 class="cta__title">You can be your own Guiding star with our help</h3>
+                     <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                        <div class="course__tab-wrapper d-flex align-items-center">
+                           <div class="course__tab-btn">
+                              <ul class="nav nav-tabs" id="courseTab" role="tablist">
+                                 <li class="nav-item" role="presentation">
+                                   <button class="nav-link" id="grid-tab" data-bs-toggle="tab" data-bs-target="#grid" type="button" role="tab" aria-controls="grid" aria-selected="true">
+                                    <svg class="grid" viewBox="0 0 24 24">
+                                       <rect x="3" y="3" class="st0" width="7" height="7"/>
+                                       <rect x="14" y="3" class="st0" width="7" height="7"/>
+                                       <rect x="14" y="14" class="st0" width="7" height="7"/>
+                                       <rect x="3" y="14" class="st0" width="7" height="7"/>
+                                       </svg>
+                                   </button>
+                                 </li>
+                                 <li class="nav-item" role="presentation">
+                                   <button class="nav-link list active" id="list-tab" data-bs-toggle="tab" data-bs-target="#list" type="button" role="tab" aria-controls="list" aria-selected="false">
+                                    <svg class="list" viewBox="0 0 512 512">
+                                       <g id="Layer_2_1_">
+                                          <path class="st0" d="M448,69H192c-17.7,0-32,13.9-32,31s14.3,31,32,31h256c17.7,0,32-13.9,32-31S465.7,69,448,69z"/>
+                                          <circle class="st0" cx="64" cy="100" r="31"/>
+                                          <path class="st0" d="M448,225H192c-17.7,0-32,13.9-32,31s14.3,31,32,31h256c17.7,0,32-13.9,32-31S465.7,225,448,225z"/>
+                                          <circle class="st0" cx="64" cy="256" r="31"/>
+                                          <path class="st0" d="M448,381H192c-17.7,0-32,13.9-32,31s14.3,31,32,31h256c17.7,0,32-13.9,32-31S465.7,381,448,381z"/>
+                                          <circle class="st0" cx="64" cy="412" r="31"/>
+                                       </g>
+                                       </svg>
+                                   </button>
+                                 </li>
+                              </ul>
+                           </div>
+                           <div class="course__view">
+                              <h4>Showing 1 - 9 of 84</h4>
+                           </div>
                         </div>
                      </div>
-                     <div class="col-xxl-5 col-xl-5 col-lg-4 col-md-4">
-                        <div class="cta__more d-md-flex justify-content-end p-relative z-index-1">
-                           <a href="contact" class="e-btn e-btn-white">Get Started</a>
+                     <!-- 오른쪽 순서정렬별-->
+                     <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                        <div class="course__sort d-flex justify-content-sm-end">
+                           <div class="course__sort-inner">
+                              <select>
+                                 <option>순서0</option>
+                                 <option>순서1</option>
+                                 <option>순서2</option>
+                                 <option>순서3</option>
+                                 <option>순서4</option>
+                                 <option>순서5</option>
+                                 <option>순서6</option>
+                              </select>
+                           </div>
                         </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="col-xxl-12">
+                     <div class="course__tab-conent">
+                        <div class="tab-content" id="courseTabContent">
+                           <div class="tab-pane fade" id="grid" role="tabpanel" aria-labelledby="grid-tab">
+                              <div class="row">
+                                 <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
+                                    <div class="course__item white-bg mb-30 fix">
+                                       <div class="course__thumb w-img p-relative fix">
+                                          <a href="news-detail">
+                                             <img src="assets/img/course/course-1.jpg" alt="">
+                                          </a>
+                                          <div class="course__tag">
+                                             <a href="#">Art & Design</a>
+                                          </div>
+                                       </div>
+                                       <div class="course__content">
+                                          <div class="course__meta d-flex align-items-center justify-content-between">
+                                             <div class="course__lesson">
+                                                <span><i class="far fa-book-alt"></i>43 Lesson</span>
+                                             </div>
+                                             <div class="course__rating">
+                                                <span><i class="icon_star"></i>4.5 (44)</span>
+                                             </div>
+                                          </div>
+                                          <h3 class="course__title"><a href="news-detail">기사제목</a></h3>
+                                          <div class="course__teacher d-flex align-items-center">
+                                             <div class="course__teacher-thumb mr-15">
+                                                <img src="assets/img/course/teacher/teacher-1.jpg" alt="">
+                                             </div>
+                                             <h6>기자이름</a></h6>
+                                          </div>
+                                       </div>
+                                       <div class="course__more d-flex justify-content-between align-items-center">
+                                          <div class="course__status">
+                                             <span>Free인데 뺼까?</span>
+                                          </div>
+                                          <div class="course__btn">
+                                             <a href="news-detail" class="link-btn">
+                                                자세히보기
+                                                <i class="far fa-arrow-right"></i>
+                                                <i class="far fa-arrow-right"></i>
+                                             </a>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="tab-pane fade show active" id="list" role="tabpanel" aria-labelledby="list-tab">
+                              <div class="row">
+                                 <div class="col-xxl-12">
+                                    <div class="course__item white-bg mb-30 fix">
+                                       <div class="row gx-0">
+                                          <div class="col-xxl-4 col-xl-4 col-lg-4">
+                                             <div class="course__thumb course__thumb-list w-img p-relative fix">
+                                                <a href="news-detail">
+                                                   <img src="assets/img/course/list/course-1.jpg" alt="">
+                                                </a>
+                                                <div class="course__tag">
+                                                   <a href="#">Art & Design</a>
+                                                </div>
+                                             </div>
+                                          </div>
+                                          <div class="col-xxl-8 col-xl-8 col-lg-8">
+                                             <div class="course__right">
+                                                <div class="course__content course__content-3">
+                                                   <div class="course__meta d-flex align-items-center">
+                                                      <div class="course__lesson mr-20">
+                                                         <span><i class="far fa-book-alt"></i>43 Lesson</span>
+                                                      </div>
+                                                      <div class="course__rating">
+                                                         <span><i class="icon_star"></i>4.5 (44)</span>
+                                                      </div>
+                                                   </div>
+                                                   <h3 class="course__title course__title-3">
+                                                      <a href="news-detail">기사제목</a>
+                                                   </h3>
+                                                   <div class="course__summary">
+                                                      <p>기사내용</p>
+                                                   </div>
+                                                   <div class="course__teacher d-flex align-items-center">
+                                                      <div class="course__teacher-thumb mr-15">
+                                                         <img src="assets/img/course/teacher/teacher-1.jpg" alt="">
+                                                      </div>
+                                                      <h6>기자이름</a></h6>
+                                                   </div>
+                                                </div>
+                                                <div class="course__more course__more-2 d-flex justify-content-between align-items-center">
+                                                   <div class="course__status">
+                                                      <span>Free인데 뺼까?</span>
+                                                   </div>
+                                                   <div class="course__btn">
+                                                      <a href="news-detail" class="link-btn">
+                                                         자세히보기
+                                                         <i class="far fa-arrow-right"></i>
+                                                         <i class="far fa-arrow-right"></i>
+                                                      </a>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>                                                                                                                                                             
+                              </div>
+                           </div>
+                         </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="col-xxl-12">
+                     <div class="basic-pagination wow fadeInUp mt-30" data-wow-delay=".2s">
+                        <ul class="d-flex align-items-center"> 
+                           <li class="prev">
+                              <a href="course-grid" class="link-btn link-prev">
+                                 Prev
+                                 <i class="arrow_left"></i>
+                                 <i class="arrow_left"></i>
+                              </a>
+                           </li>
+                           <li>
+                              <a href="course-grid">
+                                 <span>1</span>
+                              </a>
+                           </li>
+                           <li class="active">
+                              <a href="course-grid">
+                                 <span>2</span>
+                              </a>
+                           </li>
+                           <li>
+                              <a href="course-grid">
+                                 <span>3</span>
+                              </a>
+                           </li>
+                           <li class="next">
+                              <a href="course-grid" class="link-btn">
+                                 Next
+                                 <i class="arrow_right"></i>
+                                 <i class="arrow_right"></i>
+                              </a>
+                           </li>
+                        </ul>
                      </div>
                   </div>
                </div>
             </div>
          </section>
-         <!-- cta area end -->
-
-
+         <!-- course area end -->
       </main>
-
          <!-- footer area start -->
          <footer>
             <div class="footer__area footer-bg">

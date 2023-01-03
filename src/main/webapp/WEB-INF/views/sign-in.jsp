@@ -1,7 +1,6 @@
 <!doctype html>
 <html class="no-js" lang="zxx">
    <head>
-      <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
       <meta charset="utf-8">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       <title>Educal – Online Learning and Education HTML5 Template </title>
@@ -61,7 +60,7 @@
                   <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-2 col-sm-4 col-6">
                      <div class="header__left d-flex">
                         <div class="logo">
-                           <a href="index.html">
+                           <a href="index">
                               <img src="assets/img/logo/logo.png" alt="logo">
                            </a>
                         </div>
@@ -69,7 +68,7 @@
                            <nav>
                               <ul>
                                  <li>
-                                    <a href="course-grid.html" class="cat-menu d-flex align-items-center">
+                                    <a href="course-grid" class="cat-menu d-flex align-items-center">
                                        <div class="cat-dot-icon d-inline-block">
                                           <svg viewBox="0 0 276.2 276.2">
                                              <g>
@@ -90,11 +89,11 @@
                                        <span>Category</span>
                                     </a>
                                     <ul class="cat-submenu">
-                                       <li><a href="course-details.html">English Learning</a></li>
-                                       <li><a href="course-details.html">Web Development</a></li>
-                                       <li><a href="course-details.html">Logo Design</a></li>
-                                       <li><a href="course-details.html">Motion Graphics</a></li>
-                                       <li><a href="course-details.html">Video Edition</a></li>
+                                       <li><a href="course-details">English Learning</a></li>
+                                       <li><a href="course-details">Web Development</a></li>
+                                       <li><a href="course-details">Logo Design</a></li>
+                                       <li><a href="course-details">Motion Graphics</a></li>
+                                       <li><a href="course-details">Video Edition</a></li>
                                     </ul>
                                  </li>
                               </ul>
@@ -108,50 +107,50 @@
                            <nav id="mobile-menu">
                               <ul>
                                  <li class="has-dropdown">
-                                    <a href="index.html">Home</a>
+                                    <a href="index">Home</a>
                                     <ul class="submenu">
-                                       <li><a href="index.html">Home Style 1</a></li>
-                                       <li><a href="index-2.html">Home Style 2</a></li>
-                                       <li><a href="index-3.html">Home Style 3</a></li>
+                                       <li><a href="index">Home Style 1</a></li>
+                                       <li><a href="index-2">Home Style 2</a></li>
+                                       <li><a href="index-3">Home Style 3</a></li>
                                     </ul>
                                  </li>
                                  <li class="has-dropdown">
-                                    <a href="course-grid.html">Courses</a>
+                                    <a href="course-grid">Courses</a>
                                     <ul class="submenu">
-                                       <li><a href="course-grid.html">Courses</a></li>
-                                       <li><a href="course-list.html">Course List</a></li>
-                                       <li><a href="course-sidebar.html">Course sidebar</a></li>
-                                       <li><a href="course-details.html">Course Details</a></li>
+                                       <li><a href="course-grid">Courses</a></li>
+                                       <li><a href="course-list">Course List</a></li>
+                                       <li><a href="course-sidebar">Course sidebar</a></li>
+                                       <li><a href="course-details">Course Details</a></li>
                                     </ul>
                                  </li>
                                  <li class="has-dropdown">
-                                    <a href="blog.html">Blog</a>
+                                    <a href="blog">Blog</a>
                                     <ul class="submenu">
-                                       <li><a href="blog.html">Blog</a></li>
-                                       <li><a href="blog-details.html">Blog Details</a></li>
+                                       <li><a href="blog">Blog</a></li>
+                                       <li><a href="blog-details">Blog Details</a></li>
                                     </ul>
                                  </li>
                                  <li class="has-dropdown">
-                                    <a href="course-grid.html">Pages</a>
+                                    <a href="course-grid">Pages</a>
                                     <ul class="submenu">
-                                       <li><a href="about.html">About</a></li>
-                                       <li><a href="instructor.html">Instructor</a></li>
-                                       <li><a href="instructor-details.html">Instructor Details</a></li>
-                                       <li><a href="event-details.html">Event Details</a></li>
-                                       <li><a href="cart.html">My Cart</a></li>
-                                       <li><a href="wishlist.html">My Wishlist</a></li>
-                                       <li><a href="checkout.html">checkout</a></li>
-                                       <li><a href="sign-in.html">Sign In</a></li>
-                                       <li><a href="sign-up.html">Sign Up</a></li>
-                                       <li><a href="error.html">Error</a></li>
+                                       <li><a href="about">About</a></li>
+                                       <li><a href="instructor">Instructor</a></li>
+                                       <li><a href="instructor-details">Instructor Details</a></li>
+                                       <li><a href="event-details">Event Details</a></li>
+                                       <li><a href="cart">My Cart</a></li>
+                                       <li><a href="wishlist">My Wishlist</a></li>
+                                       <li><a href="checkout">checkout</a></li>
+                                       <li><a href="sign-in">Sign In</a></li>
+                                       <li><a href="sign-up">Sign Up</a></li>
+                                       <li><a href="error">Error</a></li>
                                     </ul>
                                  </li>
-                                 <li><a href="contact.html">Contact</a></li>
+                                 <li><a href="contact">Contact</a></li>
                               </ul>
                            </nav>
                         </div>
                         <div class="header__btn header__btn-2 ml-50 d-none d-sm-block">
-                           <a href="sign-up.html" class="e-btn">Sign up</a>
+                           <a href="sign-up" class="e-btn">Sign up</a>
                         </div>
                         <div class="sidebar__menu d-xl-none">
                            <div class="sidebar-toggle-btn ml-30" id="sidebar-toggle">
@@ -245,8 +244,8 @@
                      <span>$113.00</span>
                   </div>
                   <div class="cartmini__checkout-btn">
-                     <a href="cart.html" class="e-btn e-btn-border mb-10 w-100"> <span></span> view cart</a>
-                     <a href="checkout.html" class="e-btn w-100"> <span></span> checkout</a>
+                     <a href="cart" class="e-btn e-btn-border mb-10 w-100"> <span></span> view cart</a>
+                     <a href="checkout" class="e-btn w-100"> <span></span> checkout</a>
                   </div>
                </div>
             </div>
@@ -267,7 +266,7 @@
             </div>
             <div class="sidebar__content">
                <div class="logo mb-40">
-                  <a href="index.html">
+                  <a href="index">
                   <img src="assets/img/logo/logo.png" alt="logo">
                   </a>
                </div>
@@ -325,7 +324,7 @@
                         <div class="sign__header mb-35">
                            <div class="sign__in text-center">
                               <a href="#" class="sign__social text-start mb-15"><i class="fab fa-facebook-f"></i>Sign in with Facebook</a>
-                              <p> <span>........</span> Or, <a href="sign-in.html">sign in</a> with your email<span> ........</span> </p>
+                              <p> <span>........</span> Or, <a href="sign-in">sign in</a> with your email<span> ........</span> </p>
                            </div>
                         </div>
                         <div class="sign__form">
@@ -356,7 +355,7 @@
                               </div>
                               <button class="e-btn  w-100"> <span></span> Sign In</button>
                               <div class="sign__new text-center mt-20">
-                                 <p>New to Markit? <a href="sign-up.html">Sign Up</a></p>
+                                 <p>New to Markit? <a href="sign-up">Sign Up</a></p>
                               </div>
                            </form>
                         </div>
@@ -379,7 +378,7 @@
                            <div class="footer__widget mb-50">
                               <div class="footer__widget-head mb-22">
                                  <div class="footer__logo">
-                                    <a href="index.html">
+                                    <a href="index">
                                        <img src="assets/img/logo/logo-2.png" alt="">
                                     </a>
                                  </div>
@@ -465,7 +464,7 @@
                      <div class="row">
                         <div class="col-xxl-12">
                            <div class="footer__copyright text-center">
-                              <p>© 2022 Educal, All Rights Reserved. Design By <a href="index.html">Theme Pure</a></p>
+                              <p>© 2022 Educal, All Rights Reserved. Design By <a href="index">Theme Pure</a></p>
                            </div>
                         </div>
                      </div>

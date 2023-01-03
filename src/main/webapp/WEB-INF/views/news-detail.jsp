@@ -1,9 +1,10 @@
 <!doctype html>
 <html class="no-js" lang="zxx">
    <head>
+      <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
       <meta charset="utf-8">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
-      <title>Educal – Online Learning and Education HTML5 Template </title>
+      <title>뉴스상세페이지</title>
       <meta name="description" content="">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <!-- Place favicon.ico in the root directory -->
@@ -54,14 +55,15 @@
 
       <!-- header area start -->
       <header>
-         <div id="header-sticky" class="header__area header__padding-2 header__shadow">
-            <div class="container">
+         <div id="header-sticky" class="header__area header__transparent header__padding header__white">
+            <div class="container-fluid">
                <div class="row align-items-center">
                   <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-2 col-sm-4 col-6">
                      <div class="header__left d-flex">
                         <div class="logo">
                            <a href="index">
-                              <img src="assets/img/logo/logo.png" alt="logo">
+                              <img class="logo-white" src="assets/img/logo/logo-2.png" alt="logo">
+                              <img class="logo-black" src="assets/img/logo/logo.png" alt="logo">
                            </a>
                         </div>
                         <div class="header__category d-none d-lg-block">
@@ -103,7 +105,7 @@
                   </div>
                   <div class="col-xxl-9 col-xl-9 col-lg-8 col-md-10 col-sm-8 col-6">
                      <div class="header__right d-flex justify-content-end align-items-center">
-                        <div class="main-menu main-menu-2">
+                        <div class="main-menu main-menu-3">
                            <nav id="mobile-menu">
                               <ul>
                                  <li class="has-dropdown">
@@ -149,8 +151,26 @@
                               </ul>
                            </nav>
                         </div>
-                        <div class="header__btn header__btn-2 ml-50 d-none d-sm-block">
-                           <a href="sign-up" class="e-btn">Sign up</a>
+                        <div class="header__search p-relative ml-50 d-none d-md-block">
+                           <form action="#">
+                              <input type="text" placeholder="Search...">
+                              <button type="submit"><i class="fad fa-search"></i></button>
+                           </form>
+                           <div class="header__cart">
+                              <a href="javascript:void(0);" class="cart-toggle-btn">
+                                 <div class="header__cart-icon">
+                                    <svg viewBox="0 0 24 24">
+                                       <circle class="st0" cx="9" cy="21" r="1"/>
+                                       <circle class="st0" cx="20" cy="21" r="1"/>
+                                       <path class="st0" d="M1,1h4l2.7,13.4c0.2,1,1,1.6,2,1.6h9.7c1,0,1.8-0.7,2-1.6L23,6H6"/>
+                                    </svg>
+                                 </div>
+                                 <span class="cart-item">2</span>
+                              </a>
+                           </div>
+                        </div>
+                        <div class="header__btn ml-20 d-none d-sm-block">
+                           <a href="contact" class="e-btn">Try for free</a>
                         </div>
                         <div class="sidebar__menu d-xl-none">
                            <div class="sidebar-toggle-btn ml-30" id="sidebar-toggle">
@@ -300,47 +320,33 @@
       <main>
 
          <!-- page title area start -->
-         <section class="page__title-area pt-120">
+         <section class="page__title-area page__title-height-2 page__title-overlay d-flex align-items-center" data-background="assets/img/page-title/page-title-3.jpg">
             <div class="page__title-shape">
-               <img class="page-title-shape-5 d-none d-sm-block" src="assets/img/page-title/page-title-shape-1.png" alt="">
-               <img class="page-title-shape-6" src="assets/img/page-title/page-title-shape-2.png" alt="">
-               <img class="page-title-shape-7" src="assets/img/page-title/page-title-shape-4.png" alt="">
-               <img class="page-title-shape-8" src="assets/img/page-title/page-title-shape-5.png" alt="">
+               <img class="page-title-shape-1" src="assets/img/page-title/page-title-shape-1.png" alt="">
+               <img class="page-title-shape-2" src="assets/img/page-title/page-title-shape-2.png" alt="">
+               <img class="page-title-shape-3" src="assets/img/page-title/page-title-shape-3.png" alt="">
+               <img class="page-title-shape-4" src="assets/img/page-title/page-title-shape-4.png" alt="">
             </div>
             <div class="container">
                <div class="row">
-                  <div class="col-xxl-9 col-xl-8">
-                     <div class="page__title-content mb-25 pr-40">
-                        <div class="page__title-breadcrumb">                            
-                            <nav aria-label="breadcrumb">
-                              <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="index">Home</a></li>
-                                <li class="breadcrumb-item"><a href="course-grid">Event</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Become a product Manager learn the skills & job.</li>
-                              </ol>
-                            </nav>
-                        </div>
-                        <span class="page__title-pre purple-bg">Art & Design</span>
-                        <h5 class="page__title-3">Become a product manager learn the Skills & job.</h5>
-                     </div>
-                     <div class="course__meta-2 d-sm-flex mb-30">
-                        <div class="course__teacher-3 d-flex align-items-center mr-70 mb-30">
-                           <div class="course__teacher-thumb-3 mr-15">
-                              <img src="assets/img/course/teacher/teacher-1.jpg" alt="">
+                  <div class="col-xxl-10 col-xl-10 col-lg-10 ">
+                     <div class="page__title-wrapper mt-110">
+                        <span class="page__title-pre">분류?</span>
+                        <h3 class="page__title-2">기사제목</h3> 
+                        <div class="blog__meta d-flex align-items-center">
+                           <div class="blog__author d-flex align-items-center mr-40">
+                              <div class="blog__author-thumb mr-10">
+                                 <img src="assets/img/blog/author/author-1.jpg" alt="">
+                              </div>
+                              <div class="blog__author-info blog__author-info-2">
+                                 <h5>기자이름</h5>
+                              </div>
                            </div>
-                           <div class="course__teacher-info-3">
-                              <h5>Teacher</h5>
-                              <p><a href="#">Elon Gated</a></p>
+                           <div class="blog__date blog__date-2 d-flex align-items-center">
+                              <i class="fal fa-clock"></i>
+                              <span>작성날짜</span>
                            </div>
-                        </div>
-                        <div class="course__update mr-80 mb-30">
-                           <h5>Last Update:</h5>
-                           <p>July 24, 2022</p>
-                        </div>
-                        <div class="course__update mb-30">
-                           <h5>Location:</h5>
-                           <p>New York, TX 82760, US:</p>
-                        </div>
+                        </div>                      
                      </div>
                   </div>
                </div>
@@ -348,152 +354,52 @@
          </section>
          <!-- page title area end -->
 
-         <!-- event details area start -->
-         <section class="event__area pb-110">
+         <!-- blog area start -->
+         <section class="blog__area pt-120 pb-120">
             <div class="container">
                <div class="row">
                   <div class="col-xxl-8 col-xl-8 col-lg-8">
-                     <div class="events__wrapper">
-                        <div class="events__thumb mb-35 w-img">
-                           <img src="assets/img/events/event-1.jpg" alt="">
-                        </div>
-                        <div class="events__details mb-35">
-                           <h3>Description</h3>
-                           <p>He legged it up the kyver have it mush super me old mucker cheeky naff that are you taking the piss, blow off down the pub bite your arm off the wireless boot cor blimey guvnor happy days bender what a load of rubbish, say pardon me horse play spiffing Why car boot gosh bubble and squeak. Cheers Richard bugger show off show off pick your nose and blow off get stuffed mate chancer in my flat loo, bevvy amongst hunky-dory bender bubble and squeak me old mucker vagabond, barmy spend a penny chimney pot young delinquent bum bag the bee's knees chap, gosh nice one knees up the wireless Charles such a fibber. Mush barmy bleeding Jeffrey pardon me barney grub loo cup of tea bubble and squeak bugger all mate say, I bloke matie boy tickety-boo give us a bell up the duff bugger lurgy wind up I don't want no agro.</p>
-                        </div>
-                        <div class="events__allow mb-40">
-                           <h3>This event will allow participants to:</h3>
-                           <ul>
-                              <li><i class="fal fa-check"></i> Business's managers, leaders</li>
-                              <li><i class="fal fa-check"></i> Downloadable lectures, code and design assets for all projects</li>
-                              <li><i class="fal fa-check"></i> Anyone who is finding a chance to get the promotion</li>
-                           </ul>
-                        </div>
-                        <div class="events__tag">
-                           <span><i class="fal fa-tag"></i></span>
-                           <a href="#">Big data,  </a>
-                           <a href="#">Data analysis,</a>
-                           <a href="#">Data modeling</a>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-xxl-4 col-xl-4 col-lg-4">
-                     <div class="events__sidebar pl-70">
-                        <div class="events__sidebar-widget white-bg mb-20">
-                           <div class="events__sidebar-shape">
-                              <img class="events-sidebar-img-2" src="assets/img/events/event-shape-2.png" alt="">
-                              <img class="events-sidebar-img-3" src="assets/img/events/event-shape-3.png" alt="">
-                           </div>
-                           <div class="events__info">
-                              <div class="events__info-meta mb-25 d-flex align-items-center justify-content-between">
-                                 <div class="events__info-price">
-                                    <h5>$76.<span>00</span> </h5>
-                                    <h5 class="old-price">$142.00</h5>
-                                 </div>
-                                 <div class="events__info-discount">
-                                    <span>68% OFF</span>
-                                 </div>
-                              </div>
-                              <div class="events__info-content mb-35">
-                                 <ul>
-                                    <li class="d-flex align-items-center">
-                                       <div class="events__info-icon">
-                                          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
-                                             <path class="st0" d="M2,6l6-4.7L14,6v7.3c0,0.7-0.6,1.3-1.3,1.3H3.3c-0.7,0-1.3-0.6-1.3-1.3V6z"/>
-                                             <polyline class="st0" points="6,14.7 6,8 10,8 10,14.7 "/>
-                                          </svg>
-                                       </div>
-                                       <div class="events__info-item">
-                                          <h5><span>End: </span> July 26, 2022 12:30 am</h5>
-                                       </div>
-                                    </li>
-                                    <li class="d-flex align-items-center">
-                                       <div class="events__info-icon">
-                                          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
-                                             <path class="st0" d="M2,6l6-4.7L14,6v7.3c0,0.7-0.6,1.3-1.3,1.3H3.3c-0.7,0-1.3-0.6-1.3-1.3V6z"/>
-                                             <polyline class="st0" points="6,14.7 6,8 10,8 10,14.7 "/>
-                                          </svg>
-                                       </div>
-                                       <div class="events__info-item">
-                                          <h5><span>Time:</span>  10:45 AM-01:30 PM</h5>
-                                       </div>
-                                    </li>
-                                    <li class="d-flex align-items-center">
-                                       <div class="events__info-icon">
-                                          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
-                                             <path class="st0" d="M2,6l6-4.7L14,6v7.3c0,0.7-0.6,1.3-1.3,1.3H3.3c-0.7,0-1.3-0.6-1.3-1.3V6z"/>
-                                             <polyline class="st0" points="6,14.7 6,8 10,8 10,14.7 "/>
-                                          </svg>
-                                       </div>
-                                       <div class="events__info-item">
-                                          <h5><span>Venue: </span> New York, TX 82760, US</h5>
-                                       </div>
-                                    </li>
-                                 </ul>
-                              </div>
-                              <div class="events__join-btn">
-                                 <a href="contact" class="e-btn e-btn-7 w-100">Enroll <i class="far fa-arrow-right"></i></a>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="events__sidebar-widget white-bg">
-                           <div class="events__sponsor">
-                              <h3 class="events__sponsor-title">Sponsors</h3>
-                              <div class="events__sponsor-thumb mb-35">
-                                 <img src="assets/img/events/sponsor-logo.png" alt="">
-                              </div>
-                              <div class="events__sponsor-info">
-                                 <h3>Thomas R. Toe</h3>
-                                 <h4>Email: <span>support@educal.com</span></h4>
-                                 <div class="events__social d-xl-flex align-items-center">
-                                    <h4>Share:</h4>
-                                    <ul>
-                                       <li><a href="#" class="fb" ><i class="social_facebook"></i></a></li>
-                                       <li><a href="#" class="tw" ><i class="social_twitter"></i></a></li>
-                                       <li><a href="#" class="pin" ><i class="social_pinterest"></i></a></li>
-                                    </ul>
-                                 </div>
-                              </div>
-                           </div>
+                     <div class="blog__wrapper">
+                        <div class="blog__text mb-40">
+                           <p>기사내용
+                              인간이 다른 사람과 상호작용하기 위해 특정 언어가 필요한 것처럼 개발자는 기계와 상호작용하기 위해 프로그래밍 언어가 필요하다. 기술이 진보하면서 그 어느 때보다 아동의 프로그래밍 언어 교육 수요가 증가했다. 컴퓨터 프로그래밍 교육은 아동이 문제 해결력과 논리적 사고력을 재미있게 배울 방법을 제시한다.
+
+하루가 멀다 하고 개발자 세계에는 새로운 프로그래밍 언어가 등장하며, 저마다 장단점을 지닌다. 비교적 최근 등장한 언어 중 줄리아(Julia)와 고(Go)가 개발자 세계에서 화제가 되는 추세이다. 개발자 사이에서 관심도가 높은 두 언어는 아동이 학습하기에도 적합할까? 이에, 인도 IT·빅데이터 전문 매체 애널리틱스 인사이트는 둘 중 아동이 학습하기 더 어려운 언어가 어떤 언어인지 다음과 같이 설명했다.
+
+먼저, 줄리아는 MIT 재학생 네 명으로 구성된 개발팀이 프로그래밍 언어 속도 개선을 위해 개발한 고급 오픈소스 프로그래밍 언어이다. 동적 고성능 프로그래밍 언어로, 과학 분야 컴퓨터 활동에 주로 사용한다. 프로그래밍 언어 R과 비슷하게 통계적 계산이나 데이터 분석 작업에 주로 사용한다. 파이썬이나 R과 비교했을 때 실행 속도가 월등히 높은 편이다. 대규모 데이터 분석 시 필수인 클라우드 컴퓨팅과 병렬성 등 복잡한 작업을 완료하면서 빅데이터 분석 작업을 지원한다.
+
+줄리아는 파이썬, C, R과 같은 고급 프로그래밍 언어와 유사하며, 학습이 쉬운 편이라는 정점이 있다. 이 덕분에 누구나 줄리아를 비교적 쉽게 학습할 수 있다. 파이썬과 C 언어를 결합했다는 특성도 있어, 파이썬이나 C를 마스터했다면 학습하기 유리하다. 줄리아는 파이썬, R, 매트랩(MATLAB)처럼 범용 프로그래밍 언어에서 출발하며 과학적 수치계산을 위해 설계되었다. 
+
+그러나 비교적 새로 등장한 언어라는 점에서 완성도가 높은 기존 언어보다 안정성이 부족한 편이다. 또, 파이썬과 R보다 지원하는 라이브러리 수도 적다. 
+
+고는 절차지향 언어이다. 구글의 로버트 그리즈머(Robert Griesemer), 켄 톰슨(Ken Thompson)과 롭 파이크(Rob Pike)가 2007년에 개발하기 시작했지만, 2009년이 되어서야 오픈소스 프로그래밍 언어로 출시됐다. 패키지는 프로그램 어셈블리에 활용되어 종속성을 효과적으로 관리한다. 다른 동적 언어와 마찬가지로 환경 적응 패턴을 지원한다.
+
+
+
+고는 강력한 타입 시스템과 가비지 컬렉터를 사용해 실행 속도가 높다. 정적 타입 언어이므로 실행 시간이 아니라 컴파일 시간에 문제를 발견한다. 다른 언어를 학습한 개발자에게 고는 학습하기 쉬운 언어이다.
+
+그러나 고로 작성한 프로그램은 지시자와 반환 값 사용 빈도가 높아 코드 가독성이 떨어진다. 고의 자료형 체계는 하스켈(Haskell)이나 스칼라(Scala)처럼 표현력이 높지 않다.
+
+고와 줄리아는 각각 장단점을 가졌지만 모두 범용 프로그래밍 언어로 다양한 용도의 애플리케이션 개발에 활용할 수 있다. 하지만 학습 난이도만 비교하면, 줄리아가 더 쉽다고 평가할 수 있다. 언어의 학습 난이도를 과학적으로 측정할 방법은 존재하지 않지만, 언어 학계에서는 간혹 특정 언어에 익숙해질 때까지 소요하는 ‘학습 시간’을 학습 난이도의 척도로 삼는다.
+
+자연어처리 저널(Natural Language Processing (NLP) journal)에 게재된 논문 여러 편을 분석한 결과, 고 학습 시 필요한 시간은 약 3,900시간이다. 줄리아 학습 시 필요한 시간은 2,400시간으로 비교적 적은 편이다. 즉, 줄리아는 약 2개월 동안 충분히 익힐 수 있다는 의미이다. 게다가 줄리아는 파이썬을 비롯한 다른 인기 언어보다도 학습이 쉽다. 따라서 두 언어 중 고가 아동이 학습하기에는 더 어려운 언어라고 평가할 수 있다.
+
+출처 : 코딩월드뉴스(https://www.codingworldnews.com)  
+                           </p>
                         </div>
                      </div>
                   </div>
                </div>
             </div>
          </section>
-         <!-- event details area end -->
+         <!-- blog area end -->
 
-         <!-- cta area start -->
-         <section class="cta__area mb--120">
-            <div class="container">
-               <div class="cta__inner blue-bg fix">
-                  <div class="cta__shape">
-                     <img src="assets/img/cta/cta-shape.png" alt="">
-                  </div>
-                  <div class="row align-items-center">
-                     <div class="col-xxl-7 col-xl-7 col-lg-8 col-md-8">
-                        <div class="cta__content">
-                           <h3 class="cta__title">You can be your own Guiding star with our help</h3>
-                        </div>
-                     </div>
-                     <div class="col-xxl-5 col-xl-5 col-lg-4 col-md-4">
-                        <div class="cta__more d-md-flex justify-content-end p-relative z-index-1">
-                           <a href="contact" class="e-btn e-btn-white">Get Started</a>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </section>
-         <!-- cta area end -->
-
-
-      </main>
+      </main>  
 
          <!-- footer area start -->
          <footer>
             <div class="footer__area footer-bg">
-               <div class="footer__top pt-190 pb-40">
+               <div class="footer__top pt-90 pb-40">
                   <div class="container">
                      <div class="row">
                         <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6">

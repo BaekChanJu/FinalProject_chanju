@@ -1,7 +1,6 @@
 <!doctype html>
 <html class="no-js" lang="zxx">
    <head>
-      <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
       <meta charset="utf-8">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       <title>Educal – Online Learning and Education HTML5 Template </title>
@@ -61,7 +60,7 @@
                   <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-2 col-sm-4 col-6">
                      <div class="header__left d-flex">
                         <div class="logo">
-                           <a href="index.html">
+                           <a href="index">
                               <img class="logo-white" src="assets/img/logo/logo-2.png" alt="logo">
                               <img class="logo-black" src="assets/img/logo/logo.png" alt="logo">
                            </a>
@@ -70,7 +69,7 @@
                            <nav>
                               <ul>
                                  <li>
-                                    <a href="course-grid.html" class="cat-menu d-flex align-items-center">
+                                    <a href="course-grid" class="cat-menu d-flex align-items-center">
                                        <div class="cat-dot-icon d-inline-block">
                                           <svg viewBox="0 0 276.2 276.2">
                                              <g>
@@ -91,11 +90,11 @@
                                        <span>Category</span>
                                     </a>
                                     <ul class="cat-submenu">
-                                       <li><a href="course-details.html">English Learning</a></li>
-                                       <li><a href="course-details.html">Web Development</a></li>
-                                       <li><a href="course-details.html">Logo Design</a></li>
-                                       <li><a href="course-details.html">Motion Graphics</a></li>
-                                       <li><a href="course-details.html">Video Edition</a></li>
+                                       <li><a href="course-details">English Learning</a></li>
+                                       <li><a href="course-details">Web Development</a></li>
+                                       <li><a href="course-details">Logo Design</a></li>
+                                       <li><a href="course-details">Motion Graphics</a></li>
+                                       <li><a href="course-details">Video Edition</a></li>
                                     </ul>
                                  </li>
                               </ul>
@@ -109,45 +108,45 @@
                            <nav id="mobile-menu">
                               <ul>
                                  <li class="has-dropdown">
-                                    <a href="index.html">Home</a>
+                                    <a href="index">Home</a>
                                     <ul class="submenu">
-                                       <li><a href="index.html">Home Style 1</a></li>
-                                       <li><a href="index-2.html">Home Style 2</a></li>
-                                       <li><a href="index-3.html">Home Style 3</a></li>
+                                       <li><a href="index">Home Style 1</a></li>
+                                       <li><a href="index-2">Home Style 2</a></li>
+                                       <li><a href="index-3">Home Style 3</a></li>
                                     </ul>
                                  </li>
                                  <li class="has-dropdown">
-                                    <a href="course-grid.html">Courses</a>
+                                    <a href="course-grid">Courses</a>
                                     <ul class="submenu">
-                                       <li><a href="course-grid.html">Courses</a></li>
-                                       <li><a href="course-list.html">Course List</a></li>
-                                       <li><a href="course-sidebar.html">Course sidebar</a></li>
-                                       <li><a href="course-details.html">Course Details</a></li>
+                                       <li><a href="course-grid">Courses</a></li>
+                                       <li><a href="course-list">Course List</a></li>
+                                       <li><a href="course-sidebar">Course sidebar</a></li>
+                                       <li><a href="course-details">Course Details</a></li>
                                     </ul>
                                  </li>
                                  <li class="has-dropdown">
-                                    <a href="blog.html">Blog</a>
+                                    <a href="blog">Blog</a>
                                     <ul class="submenu">
-                                       <li><a href="blog.html">Blog</a></li>
-                                       <li><a href="blog-details.html">Blog Details</a></li>
+                                       <li><a href="blog">Blog</a></li>
+                                       <li><a href="blog-details">Blog Details</a></li>
                                     </ul>
                                  </li>
                                  <li class="has-dropdown">
-                                    <a href="course-grid.html">Pages</a>
+                                    <a href="course-grid">Pages</a>
                                     <ul class="submenu">
-                                       <li><a href="about.html">About</a></li>
-                                       <li><a href="instructor.html">Instructor</a></li>
-                                       <li><a href="instructor-details.html">Instructor Details</a></li>
-                                       <li><a href="event-details.html">Event Details</a></li>
-                                       <li><a href="cart.html">My Cart</a></li>
-                                       <li><a href="wishlist.html">My Wishlist</a></li>
-                                       <li><a href="checkout.html">checkout</a></li>
-                                       <li><a href="sign-in.html">Sign In</a></li>
-                                       <li><a href="sign-up.html">Sign Up</a></li>
-                                       <li><a href="error.html">Error</a></li>
+                                       <li><a href="about">About</a></li>
+                                       <li><a href="instructor">Instructor</a></li>
+                                       <li><a href="instructor-details">Instructor Details</a></li>
+                                       <li><a href="event-details">Event Details</a></li>
+                                       <li><a href="cart">My Cart</a></li>
+                                       <li><a href="wishlist">My Wishlist</a></li>
+                                       <li><a href="checkout">checkout</a></li>
+                                       <li><a href="sign-in">Sign In</a></li>
+                                       <li><a href="sign-up">Sign Up</a></li>
+                                       <li><a href="error">Error</a></li>
                                     </ul>
                                  </li>
-                                 <li><a href="contact.html">Contact</a></li>
+                                 <li><a href="contact">Contact</a></li>
                               </ul>
                            </nav>
                         </div>
@@ -170,7 +169,7 @@
                            </div>
                         </div>
                         <div class="header__btn ml-20 d-none d-sm-block">
-                           <a href="contact.html" class="e-btn">Try for free</a>
+                           <a href="contact" class="e-btn">Try for free</a>
                         </div>
                         <div class="sidebar__menu d-xl-none">
                            <div class="sidebar-toggle-btn ml-30" id="sidebar-toggle">
@@ -264,8 +263,8 @@
                      <span>$113.00</span>
                   </div>
                   <div class="cartmini__checkout-btn">
-                     <a href="cart.html" class="e-btn e-btn-border mb-10 w-100"> <span></span> view cart</a>
-                     <a href="checkout.html" class="e-btn w-100"> <span></span> checkout</a>
+                     <a href="cart" class="e-btn e-btn-border mb-10 w-100"> <span></span> view cart</a>
+                     <a href="checkout" class="e-btn w-100"> <span></span> checkout</a>
                   </div>
                </div>
             </div>
@@ -286,7 +285,7 @@
             </div>
             <div class="sidebar__content">
                <div class="logo mb-40">
-                  <a href="index.html">
+                  <a href="index">
                   <img src="assets/img/logo/logo.png" alt="logo">
                   </a>
                </div>
@@ -328,7 +327,7 @@
                         <h3 class="page__title">Blog Grid</h3>                         
                         <nav aria-label="breadcrumb">
                            <ol class="breadcrumb">
-                              <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                              <li class="breadcrumb-item"><a href="index">Home</a></li>
                               <li class="breadcrumb-item active" aria-current="page">Blog Grid</li>
                            </ol>
                         </nav>
@@ -349,7 +348,7 @@
                            <div class="blog__wrapper">
                               <div class="blog__item white-bg mb-30 transition-3 fix">
                                  <div class="blog__thumb w-img fix">
-                                    <a href="blog-details.html">
+                                    <a href="blog-details">
                                        <img src="assets/img/blog/blog-1.jpg" alt="">
                                     </a>
                                  </div>
@@ -357,7 +356,7 @@
                                     <div class="blog__tag">
                                        <a href="#">Art & Design</a>
                                     </div>
-                                    <h3 class="blog__title"><a href="blog-details.html">The Challenge Of Global Learning In Public Education</a></h3>
+                                    <h3 class="blog__title"><a href="blog-details">The Challenge Of Global Learning In Public Education</a></h3>
          
                                     <div class="blog__meta d-flex align-items-center justify-content-between">
                                        <div class="blog__author d-flex align-items-center">
@@ -381,7 +380,7 @@
                            <div class="blog__wrapper">
                               <div class="blog__item white-bg mb-30 transition-3 fix">
                                  <div class="blog__thumb w-img fix">
-                                    <a href="blog-details.html">
+                                    <a href="blog-details">
                                        <img src="assets/img/blog/blog-2.jpg" alt="">
                                     </a>
                                  </div>
@@ -389,7 +388,7 @@
                                     <div class="blog__tag">
                                        <a href="#" class="purple">Art & Design</a>
                                     </div>
-                                    <h3 class="blog__title"><a href="blog-details.html">Exactly How Technology Can Make Reading Better</a></h3>
+                                    <h3 class="blog__title"><a href="blog-details">Exactly How Technology Can Make Reading Better</a></h3>
          
                                     <div class="blog__meta d-flex align-items-center justify-content-between">
                                        <div class="blog__author d-flex align-items-center">
@@ -413,7 +412,7 @@
                            <div class="blog__wrapper">
                               <div class="blog__item white-bg mb-30 transition-3 fix">
                                  <div class="blog__thumb w-img fix">
-                                    <a href="blog-details.html">
+                                    <a href="blog-details">
                                        <img src="assets/img/blog/blog-3.jpg" alt="">
                                     </a>
                                  </div>
@@ -421,7 +420,7 @@
                                     <div class="blog__tag">
                                        <a href="#" class="pink">Art & Design</a>
                                     </div>
-                                    <h3 class="blog__title"><a href="blog-details.html">New Chicago school budget relies on state pension</a></h3>
+                                    <h3 class="blog__title"><a href="blog-details">New Chicago school budget relies on state pension</a></h3>
          
                                     <div class="blog__meta d-flex align-items-center justify-content-between">
                                        <div class="blog__author d-flex align-items-center">
@@ -445,7 +444,7 @@
                            <div class="blog__wrapper">
                               <div class="blog__item white-bg mb-30 transition-3 fix">
                                  <div class="blog__thumb w-img fix">
-                                    <a href="blog-details.html">
+                                    <a href="blog-details">
                                        <img src="assets/img/blog/blog-4.jpg" alt="">
                                     </a>
                                  </div>
@@ -453,7 +452,7 @@
                                     <div class="blog__tag">
                                        <a href="#" class="green">Art & Design</a>
                                     </div>
-                                    <h3 class="blog__title"><a href="blog-details.html">Google Ads certifications: Are they worth it?</a></h3>
+                                    <h3 class="blog__title"><a href="blog-details">Google Ads certifications: Are they worth it?</a></h3>
          
                                     <div class="blog__meta d-flex align-items-center justify-content-between">
                                        <div class="blog__author d-flex align-items-center">
@@ -477,7 +476,7 @@
                            <div class="blog__wrapper">
                               <div class="blog__item white-bg mb-30 transition-3 fix">
                                  <div class="blog__thumb w-img fix">
-                                    <a href="blog-details.html">
+                                    <a href="blog-details">
                                        <img src="assets/img/blog/blog-5.jpg" alt="">
                                     </a>
                                  </div>
@@ -485,7 +484,7 @@
                                     <div class="blog__tag">
                                        <a href="#" class="orange">Art & Design</a>
                                     </div>
-                                    <h3 class="blog__title"><a href="blog-details.html">14 Facebook Ad Examples for Ad Creative Inspiration</a></h3>
+                                    <h3 class="blog__title"><a href="blog-details">14 Facebook Ad Examples for Ad Creative Inspiration</a></h3>
          
                                     <div class="blog__meta d-flex align-items-center justify-content-between">
                                        <div class="blog__author d-flex align-items-center">
@@ -509,7 +508,7 @@
                            <div class="blog__wrapper">
                               <div class="blog__item white-bg mb-30 transition-3 fix">
                                  <div class="blog__thumb w-img fix">
-                                    <a href="blog-details.html">
+                                    <a href="blog-details">
                                        <img src="assets/img/blog/blog-6.jpg" alt="">
                                     </a>
                                  </div>
@@ -517,7 +516,7 @@
                                     <div class="blog__tag">
                                        <a href="#" class="blue">Art & Design</a>
                                     </div>
-                                    <h3 class="blog__title"><a href="blog-details.html">How to manage Facebook ads for clients the right way</a></h3>
+                                    <h3 class="blog__title"><a href="blog-details">How to manage Facebook ads for clients the right way</a></h3>
          
                                     <div class="blog__meta d-flex align-items-center justify-content-between">
                                        <div class="blog__author d-flex align-items-center">
@@ -543,7 +542,7 @@
                            <div class="basic-pagination wow fadeInUp mt-30" data-wow-delay=".2s">
                               <ul class="d-flex align-items-center"> 
                                  <li class="prev">
-                                    <a href="blog.html" class="link-btn link-prev">
+                                    <a href="blog" class="link-btn link-prev">
                                        Prev
                                        <i class="arrow_left"></i>
                                        <i class="arrow_left"></i>
@@ -555,17 +554,17 @@
                                     </a>
                                  </li>
                                  <li class="active">
-                                    <a href="blog.html">
+                                    <a href="blog">
                                        <span>2</span>
                                     </a>
                                  </li>
                                  <li>
-                                    <a href="blog.html">
+                                    <a href="blog">
                                        <span>3</span>
                                     </a>
                                  </li>
                                  <li class="next">
-                                    <a href="blog.html" class="link-btn">
+                                    <a href="blog" class="link-btn">
                                        Next
                                        <i class="arrow_right"></i>
                                        <i class="arrow_right"></i>
@@ -605,35 +604,35 @@
                               <div class="rc__post-wrapper">
                                  <div class="rc__post d-flex align-items-center">
                                     <div class="rc__thumb mr-20">
-                                       <a href="blog-details.html"><img src="assets/img/blog/sm/blog-sm-1.jpg" alt=""></a>
+                                       <a href="blog-details"><img src="assets/img/blog/sm/blog-sm-1.jpg" alt=""></a>
                                     </div>
                                     <div class="rc__content">
                                        <div class="rc__meta">
                                           <span>October 15, 2021</span>
                                        </div>
-                                       <h6 class="rc__title"><a href="blog-details.html">The Importance  Intrinsic Motivation.</a></h6>
+                                       <h6 class="rc__title"><a href="blog-details">The Importance  Intrinsic Motivation.</a></h6>
                                     </div>
                                  </div>
                                  <div class="rc__post d-flex align-items-center">
                                     <div class="rc__thumb mr-20">
-                                       <a href="blog-details.html"><img src="assets/img/blog/sm/blog-sm-2.jpg" alt=""></a>
+                                       <a href="blog-details"><img src="assets/img/blog/sm/blog-sm-2.jpg" alt=""></a>
                                     </div>
                                     <div class="rc__content">
                                        <div class="rc__meta">
                                           <span>March 26, 2021</span>
                                        </div>
-                                       <h6 class="rc__title"><a href="blog-details.html">A Better Alternative To Grading Student.</a></h6>
+                                       <h6 class="rc__title"><a href="blog-details">A Better Alternative To Grading Student.</a></h6>
                                     </div>
                                  </div>
                                  <div class="rc__post d-flex align-items-center">
                                     <div class="rc__thumb mr-20">
-                                       <a href="blog-details.html"><img src="assets/img/blog/sm/blog-sm-3.jpg" alt=""></a>
+                                       <a href="blog-details"><img src="assets/img/blog/sm/blog-sm-3.jpg" alt=""></a>
                                     </div>
                                     <div class="rc__content">
                                        <div class="rc__meta">
                                           <span>October 15, 2021</span>
                                        </div>
-                                       <h6 class="rc__title"><a href="blog-details.html">Strategic Social Media & Evolution of Visual</a></h6>
+                                       <h6 class="rc__title"><a href="blog-details">Strategic Social Media & Evolution of Visual</a></h6>
                                     </div>
                                  </div>
                               </div>
@@ -646,11 +645,11 @@
                            <div class="sidebar__widget-content">
                               <div class="sidebar__category">
                                  <ul>
-                                    <li><a href="blog.html">Category</a></li>
-                                    <li><a href="blog.html">Video & Tips  (4)</a></li>
-                                    <li><a href="blog.html">Education  (8)</a></li>
-                                    <li><a href="blog.html">Business  (5)</a></li>
-                                    <li><a href="blog.html">UX Design  (3)</a></li>
+                                    <li><a href="blog">Category</a></li>
+                                    <li><a href="blog">Video & Tips  (4)</a></li>
+                                    <li><a href="blog">Education  (8)</a></li>
+                                    <li><a href="blog">Business  (5)</a></li>
+                                    <li><a href="blog">UX Design  (3)</a></li>
                                  </ul>
                               </div>
                            </div>
@@ -696,7 +695,7 @@
                            <div class="footer__widget mb-50">
                               <div class="footer__widget-head mb-22">
                                  <div class="footer__logo">
-                                    <a href="index.html">
+                                    <a href="index">
                                        <img src="assets/img/logo/logo-2.png" alt="">
                                     </a>
                                  </div>
@@ -782,7 +781,7 @@
                      <div class="row">
                         <div class="col-xxl-12">
                            <div class="footer__copyright text-center">
-                              <p>© 2022 Educal, All Rights Reserved. Design By <a href="index.html">Theme Pure</a></p>
+                              <p>© 2022 Educal, All Rights Reserved. Design By <a href="index">Theme Pure</a></p>
                            </div>
                         </div>
                      </div>

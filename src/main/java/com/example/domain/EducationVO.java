@@ -21,10 +21,14 @@ public class EducationVO {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer ed_id;
 	
+	//0102 찬주 검색으로 인해 변경
 	@Column(name="ed_title")
 	private String edTitle;
 	
-	private String ed_name;
+	//0103 찬주 검색으로 인해 변경
+	@Column(name="ed_name")
+	private String edName;
+	
 	private Date ed_enlist_date;
 	private Date ed_start_date;
 	private Date ed_end_date;
@@ -36,4 +40,5 @@ public class EducationVO {
 	private String ed_comm;
 	private String ed_curriculum;
 	private Boolean ed_tf;
+	
 }

@@ -14,13 +14,13 @@
 
 
 
-<div class = "main" style="width:935px; height:950px;  float:left; margin-right:7px; ">
-	<a href="index-2" class="">
+<div class = "main" style="width:935px; height:950px;  float:left; ">
+	<a href="academy/index-2" class="">
       <img src ="assets/img/coding1.gif" style="width:100%; height:100%;" >
    </a>
       
 </div>
-<div class = "main" style="width:945px; height:950px;  float:left; ">
+<div class = "main" style="width:950px; height:950px;  float:left; ">
    <a href="index-3" class="">
       <img src ="assets/img/coding2.gif" style="width:100%; height:100%;" >
    </a>
