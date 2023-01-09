@@ -1,8 +1,9 @@
 <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!doctype html>
 <html class="no-js" lang="zxx">
    <head>
-      <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+      
       <meta charset="utf-8">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       <title>Educal – Online Learning and Education HTML5 Template </title>
@@ -23,7 +24,10 @@
       <link rel="stylesheet" href="../assets/css/elegantFont.css">
       <link rel="stylesheet" href="../assets/css/default.css">
       <link rel="stylesheet" href="../assets/css/style.css">
-    
+      <link rel="stylesheet" href="../assets/css/wishlist.css"><!-- 0106 좋아요 버튼 관련 css -->
+      <style>
+         @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap');
+         </style>
    </head>
    <body>
       <!--[if lte IE 9]>
@@ -154,16 +158,22 @@
                            </nav>
                         </div>
 
-                           <!-- 0103 찬주2
-                              메인화면에서의 검색기능과 동일한 부분 
-                           -->
+
+
+                        
+                        <!-- 0103 찬주2
+                           메인화면에서의 검색기능과 동일한 부분 
+                        -->
 
                         <div class="header__search p-relative ml-50 d-none d-md-block">
-                           <form action=/academy/mainsearch method="GET" role="search">
-                              <input type="text"  name ="keyword" placeholder="ex)교육과정 및 학원이름 검색">
+
+                           <form id = "main" action=/academy/course-sidebar method="GET">
+                              <input type="text" name ="keywords"  placeholder="ex)교육과정 및 학원이름 검색">
                               <button type="submit"><i class="fad fa-search"></i></button>
                            </form>
                            <!-- 검색 끝-->
+
+
 
 
                            <div class="header__cart">
@@ -385,34 +395,51 @@
                               </ul>
                            </div>
                            <div class="course__view">
-                               <!-- 이부분은 나중에 값넣어서 보이게 하기 -->
-                              <h4>Showing 1 - 9 of 84</h4>
-                           </div>
-                        </div>
+                              <!-- 0106 이부분은 나중에 값넣어서 보이게 하기 -->
+                             <h4>Showing ${startBlockPage} - ${endBlockPage} of ${getTotalElements}</h4>
+                          </div>
+                       </div>
+
+
+
+
+                        <!--0104 찬주 ~순 최신등록순으로 정렬 까지만 했음  -->
                         <div class="course__sort d-flex justify-content-sm-end">
                            <div class="course__sort-inner">
-                              <select>
-                                 <option>--선택--</option>
-                                 <option>최신순</option>
-                                 <option>인기순</option>
-                                 <option>리뷰많은순</option>
-                                 <option>별점순</option>
-                                 <option>Option 5</option>
-                                 <option>Option 6</option>
+
+                           <form id="selectForm" action=/academy/course-sidebar method="GET">
+                              <select name="order">
+                                 <option >--선택--</option>
+                                 <option value="new">최신 등록순</option>
+                                 <option value="star">별점평균높은순</option>
                               </select>
+                           </form>
+
                            </div>
                         </div>
+                        <!-- 종료 부분-->
+
+                        
+
+
+
                      </div>
                      <div class="course__tab-conent">
                         <div class="tab-content" id="courseTabContent">
                            <div class="tab-pane fade show active" id="grid" role="tabpanel" aria-labelledby="grid-tab">
                               <div class="row">
+
+
+                               <!--화면 상세리스트 값들 나오는 부분 -->
                                  <c:forEach items="${academyList}" var="education">
+                                    <input type="hidden" value="${education.edDays}" name="edDays">
                                  <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
                                     <div class="course__item white-bg mb-30 fix">
                                        <div class="course__thumb w-img p-relative fix">
-                                          <a href="course-details?ed_id=${education.ed_id}">
-                                             <img src="../assets/img/course/course-1.jpg" alt="">
+                                          <a href="course-details?edId=${education.edId}">
+                                         
+                                             <!--해당 교육과정 관련 이미지 저장 경로 지정-->
+                                             <img src="../assets/img/course/${education.ed_pic}" alt="" width='370' height='260' >
                                           </a>
                                           <div class="course__tag">
                                              <!-- 국비/ 부트캠프 인지-->
@@ -421,29 +448,45 @@
                                        </div>
                                        <div class="course__content">
                                           <div class="course__meta d-flex align-items-center justify-content-between">
-                                             <div class="course__lesson">
-                                                <span><i class="far fa-book-alt"></i>43 Lesson</span>
+                                             <div class="course__lesson"> <!--0106 좋아요버튼-->
+                                                <span><a href="javascript:;"  class="icon heart">
+                                                   <img id="likeBtn" src="https://cdn-icons-png.flaticon.com/512/812/812327.png" alt="찜하기">
+                                                </a><input type="hidden" id="like_check" value="1"></span>
                                              </div>
-                                             <div class="course__rating">
-                                                <!--별점과 값은 평균내서 값을 넣어야함-->
-                                                <span><i class="icon_star"></i>4.5(평균해서) (44)</span>
-                                             </div>
-                                          </div>
-                                          <h3 class="course__title"><a href="../course-details?ed_id=${education.ed_id}">${education.edTitle}</a></h3>
+
+                                             <!-- 별점출력 부분 값 지정해주기-->
+                                            
+                                             
+                                             <c:if test="${not empty education.avg}" >
+                                                <div class="course__rating">
+                                                   <span><i class="icon_star"></i>${education.avg}</span>
+                                                 </div>
+                                             </c:if>
+                                         
+                                                   </div>
+                                            
+                                         
+
+                                       </div>
+                                          <h3 class="course__title"><a href="course-details?edId=${education.edId}">${education.edTitle}</a></h3>
                                           <div class="course__teacher d-flex align-items-center">
                                              <div class="course__teacher-thumb mr-15">
-                                                <img src="../assets/img/course/teacher/teacher-1.jpg" alt="">
+                                                <img src="../assets/img/course/charity.png" alt="">
                                              </div>
-                                             <!--학원이름 ed_name VO바꿔서 edName 해줌-->
                                              <h6><a href="instructor-details">${education.edName}</a></h6>
                                           </div>
+                                          <div class="course__tag-2 mt-15">
+                                             <!--0106 여기에 해당하는 키워드(값들 꺼내서)들 넣기-->
+                                           <span><i class="fal fa-tag"></i>
+                                            ${education.edKeyword}</span>
+                                         </div>
                                        </div>
                                        <div class="course__more d-flex justify-content-between align-items-center">
                                           <div class="course__status">
-                                             <span>${education.ed_price}</span>
+                                             <span>${education.ed_price}원</span>
                                           </div>
                                           <div class="course__btn">
-                                             <a href="course-details" class="link-btn">
+                                             <a href="course-details?edId=${education.edId}" class="link-btn">
                                                 Know Details
                                                 <i class="far fa-arrow-right"></i>
                                                 <i class="far fa-arrow-right"></i>
@@ -453,6 +496,7 @@
                                     </div>
                                  </div>
                               </c:forEach>
+                           
                               </div>
                            </div>
                            <div class="tab-pane fade" id="list" role="tabpanel" aria-labelledby="list-tab">
@@ -464,7 +508,8 @@
                                           <div class="col-xxl-4 col-xl-4 col-lg-4">
                                              <div class="course__thumb course__thumb-list w-img p-relative fix">
                                                 <a href="course-details">
-                                                   <img src="../assets/img/course/list/course-1.jpg" alt="">
+                                                   <!--해당 교육과정 관련 이미지 저장 경로 지정-->
+                                                   <img src="../assets/img/course/${education.ed_pic}" alt="" width='370' height='220' />
                                                 </a>
                                                 <div class="course__tag">
                                                    <a href="#">국비인지 부트인지</a>
@@ -476,26 +521,37 @@
                                                 <div class="course__content course__content-4">
                                                    <div class="course__meta d-flex align-items-center">
                                                       <div class="course__lesson mr-20">
-                                                         <span><i class="far fa-book-alt"></i>43 Lesson</span>
+                                                         <span><a href="javascript:;"  class="icon heart">
+                                                            <img id="likeBtn" src="https://cdn-icons-png.flaticon.com/512/812/812327.png" alt="찜하기">
+                                                         </a><input type="hidden" id="like_check" value="1"></span>
                                                       </div>
-                                                      <div class="course__rating">
-                                                         <!--별점과 값은 평균내서 값을 넣어야함-->
-                                                         <span><i class="icon_star"></i>4.5(평균해서) (44)</span>
-                                                      </div>
+                                                      <!-- 별점출력 부분 값 지정해주기-->
+                                                      <c:if test="${not empty education.avg}" >
+                                                         <div class="course__rating">
+                                                            <span><i class="icon_star"></i>${education.avg}</span>
+                                                          </div>
+                                                      </c:if>
+                                                  
+                                                            </div>
                                                    </div>
                                                    <h3 class="course__title">
                                                       <a href="course-details">${education.edTitle}</a>
                                                    </h3>
                                                    <div class="course__teacher d-flex align-items-center">
                                                       <div class="course__teacher-thumb mr-15">
-                                                         <img src="../assets/img/course/teacher/teacher-1.jpg" alt="">
+                                                         <img src="../assets/img/course/charity.png" alt="">
                                                       </div>
                                                       <h6><a href="instructor-details">${education.edName}</a></h6>
                                                    </div>
+                                                   <div class="course__tag-2 mt">
+                                                      <!--여기에 해당하는 키워드(값들 꺼내서)들 넣기-->
+                                                    <span><i class="fal fa-tag"></i>
+                                                     ${education.edKeyword}</span>
+                                                  </div>
                                                 </div>
                                                 <div class="course__more course__more-2 course__more-3 d-flex justify-content-between align-items-center">
                                                    <div class="course__status">
-                                                      <span>${education.ed_price}</span>
+                                                      <span>${education.ed_price}원</span>
                                                    </div>
                                                    <div class="course__btn">
                                                       <a href="course-details" class="link-btn">
@@ -514,54 +570,95 @@
                               </div>
                            </div>
                          </div>
+
+
+                             <!-- 페이징 영역 시작  경호형꺼 받음 0104-->
+                         
                          <div class="row">
                            <div class="col-xxl-12">
                               <div class="basic-pagination wow fadeInUp mt-30" data-wow-delay=".2s">
                                  <ul class="d-flex align-items-center"> 
+                                    <!-- first : 해당 페이지가 첫번째 페이지인지 여부(true/false로 구분)-->
+                                    <!-- 해당페이지가 첫번째인 경우에는 아무것도 설정안함-->
+                                    <!-- 해당 페이지가 첫번째 페이지가 아닌경우-->
+                                    <!-- 맨처음페이지로 이동 -->
+                                    <c:choose>
+                                    <c:when test="${elist.first}"></c:when>
+                                    
+                                    <c:otherwise>
                                     <li class="prev">
-                                       <a href="course-grid" class="link-btn link-prev">
+                                       <a href="course-sidebar?page=1" class="link-btn link-prev">
                                           Prev
                                           <i class="arrow_left"></i>
                                           <i class="arrow_left"></i>
                                        </a>
                                     </li>
-                                    <li>
-                                       <a href="course-grid">
-                                          <span>1</span>
-                                       </a>
-                                    </li>
-                                    <li class="active">
-                                       <a href="course-grid">
-                                          <span>2</span>
-                                       </a>
-                                    </li>
-                                    <li>
-                                       <a href="product">
-                                          <span>3</span>
-                                       </a>
-                                    </li>
-                                    <li class="next">
-                                       <a href="course-grid" class="link-btn">
-                                          Next
-                                          <i class="arrow_right"></i>
-                                          <i class="arrow_right"></i>
-                                       </a>
-                                    </li>
+                                 </c:otherwise>
+                              </c:choose>
+
+                           <!-- 페이지 그룹 -->
+                           <!-- 시작블럭을 반복시작 인덱스로 종료블럭을 반복종료 인덱스로 설정  -->
+                           <c:forEach begin="${startBlockPage}" end="${endBlockPage}" var="i">
+                           <!-- 현재페이지의 +1이 i랑 같은 경우 다음페이지로 이동하게 설정 -->
+                           <!-- 현재페이지의 +1이 i랑 다른 경우 다음 페이지로 이동하게 설정-->
+                           <c:choose>
+                           <c:when test="${pageNumber+1 == i}">
+                              <li>
+                                 <a href="course-sidebar?page=${i}&order=${param.order}&keywords=${param.keywords}"><span>${i}</span></a>
+                              </li>
+                           </c:when>
+                           <c:otherwise>
+                              <li><a href="course-sidebar?page=${i}&order=${param.order}&keywords=${param.keywords}"><span>${i}</span></a></li>
+                           </c:otherwise>
+                           </c:choose>
+                           </c:forEach>
+                           <!-- 맨마지막페이지 -->
+                           <!-- last : 해당 페이지가 마지막 페이지인지 여부(true/false로 구분)-->
+                           <!-- 해당페이지가 마지막인 경우에는 아무것도 설정안함-->
+                           <!-- 해당 페이지가 마지막 페이지가 아닌경우-->
+                           <!-- 마지막페이지로 이동 -->
+                           <c:choose>     
+                           <c:when test="${elist.last}"></c:when>
+                           <c:otherwise>
+                              <li class="next">
+                                 <a href="course-sidebar?page=${totalPages}" class="link-btn">
+                                 Next
+                                 <i class="arrow_right"></i>
+                                 <i class="arrow_right"></i>
+                                 </a>
+                              </li>
+                           </c:otherwise>
+                           </c:choose>
                                  </ul>
                               </div>
                            </div>
                         </div>
                      </div>
                   </div>
+
+
+
+                         
+
+
+
+
+
+
+
+
+
                   <div class="col-xxl-4 col-xl-4 col-lg-4">
                      <div class="course__sidebar pl-70">
                         <div class="course__sidebar-widget grey-bg">
                            <div class="course__sidebar-info">
                               <h3 class="course__sidebar-title">All Curriculum</h3>
 
+
+
                               <!-- 찬주3
                                   0103 카테고리별 검색 form태그-->
-                              <form action=/academy/detailsSearch method="GET" role="search">
+                                  <form id="detailsForm" action=/academy/course-sidebar method="GET">
                               <ul>
                                  <li>
                                     <div class="course__sidebar-check mb-10 d-flex align-items-center">
@@ -803,6 +900,9 @@
       <script src="../assets/js/imagesloaded.pkgd.min.js"></script>
       <script src="../assets/js/main.js"></script>
       <script src="../assets/js/search.js"></script><!--0103 카테고리 검색용 추가 찬주-->
+      <script src="../assets/js/jquerySelectBox.js"></script><!--0104 ~순 추가 제이쿼리-->
+      <script src="../assets/js/wishList.js"></script><!--0106 좋아요 버튼 관련 ajax-->
+
+  
    </body>
 </html>
-

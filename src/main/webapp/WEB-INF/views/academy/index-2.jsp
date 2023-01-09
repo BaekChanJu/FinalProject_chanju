@@ -24,7 +24,7 @@
       <link rel="stylesheet" href="../assets/css/elegantFont.css">
       <link rel="stylesheet" href="../assets/css/default.css">
       <link rel="stylesheet" href="../assets/css/style.css">
-      <link rel="stylesheet" href="../assets/css/quickmenu.css"> <!--찬주추가 퀵메뉴로 인해 추가-->
+      <link rel="stylesheet" href="../assets/css/quickmenu.css"> <!--퀵메뉴로 인해 추가-->
    </head>
    <body>
       <!--[if lte IE 9]>
@@ -34,8 +34,7 @@
       <!-- Add your site or application content here -->  
 
 
-      <!--찬주
-         0102퀵메뉴 추가-->
+      <!--0102퀵메뉴 추가-->
       <div class="quickmenu">
       
          <ul style="text-decoration: none">
@@ -73,14 +72,14 @@
                   <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-2 col-sm-4 col-4">
                      <div class="header__left d-flex">
                         <div class="logo">
-                           <a href="academy/index-2">
+                           <a href="index-2">
                               <img src="../assets/img/logo/logo.png" alt="logo">
                            </a>
                         </div>
                      </div>
                   </div>
                   <c:choose>
-							<c:when test="${empty sessionScope.m_id}">
+							<c:when test="${empty sessionScope.memId}">
 
                         <div class="col-xxl-7 col-xl-7 col-lg-6 col-md-7 col-sm-6 col-6">
                            <div class="header__center align-items-center d-flex justify-content-center">
@@ -95,7 +94,7 @@
                                           </ul>
                                        </li>
                                        <li>
-                                          <a href="course-sidebar">학원 목록</a>
+                                          <a href="course-grid">학원 목록</a>
                                        </li>
                                        <li class="has-dropdown">
                                           <a href="honestAnswer">게시판</a>
@@ -125,7 +124,7 @@
                         </div>
 
                      </c:when>
-							<c:when test="${not empty sessionScope.m_id}">
+							<c:when test="${not empty sessionScope.memId}">
 
                         <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-3 col-3">
                            <div class="header__center align-items-center d-flex justify-content-center">
@@ -133,24 +132,24 @@
                                  <nav id="mobile-menu">
                                     <ul>
                                        <li class="has-dropdown">
-                                          <a href="academy/about">About</a>
+                                          <a href="about">About</a>
                                           <ul class="submenu">
-                                             <li><a href="academy/about">로고 소개</a></li>
-                                             <li><a href="academy/map">지도</a></li>
+                                             <li><a href="about">로고 소개</a></li>
+                                             <li><a href="map">지도</a></li>
                                           </ul>
                                        </li>
                                        <li>
-                                          <a href="academy/course-grid">학원 목록</a>
+                                          <a href="course-grid">학원 목록</a>
                                        </li>
                                        <li class="has-dropdown">
-                                          <a href="academy/honestAnswer">게시판</a>
+                                          <a href="honestAnswer">게시판</a>
                                           <ul class="submenu">
-                                             <li><a href="academy/honestAnswer">솔직답변</a></li>
-                                             <li><a href="academy/codingNews">코딩 뉴스</a></li>
-                                             <li><a href="academy/codingBoard">코딩 게시판</a></li>
+                                             <li><a href="honestAnswer">솔직답변</a></li>
+                                             <li><a href="codingNews">코딩 뉴스</a></li>
+                                             <li><a href="codingBoard">코딩 게시판</a></li>
                                           </ul>
                                        </li>
-                                       <li><a href="academy/chatbot">챗봇</a></li>
+                                       <li><a href="chatbot">챗봇</a></li>
                                     </ul>
                                  </nav>
                               </div>
@@ -164,7 +163,7 @@
                               </div>
                               <!-- 찜하기, 마이페이지 아이콘, 종 히스토리 -->
                               <div class="header__btn header__btn-2 d-none d-sm-block">
-                                 <a href="sign-out" class="e-btn">로그아웃</a>
+                                 <a href="/logoutMember" class="e-btn">로그아웃</a>
                               </div>
                               <div class="sidebar__menu d-xl-none">
                                  <div class="sidebar-toggle-btn ml-30" id="sidebar-toggle">
@@ -340,18 +339,23 @@
 
 
                            
+                           
+                           
                           <!--찬주추가1
-                              교육과정이름, 학원명 으로 검색가능-->
+                           교육과정이름, 학원명 으로 검색가능-->
                            <div class="hero__search">
                               <!-- mainsearch 컨트롤러 구현완료 JPA-->
-                              <form action=/academy/mainsearch method="GET" role="search">
+                              <form action=/academy/course-sidebar method="GET" >
                                  <div class="hero__search-input mb-10">
-                                    <input type="text" name ="keyword" placeholder="ex)교육과정 및 학원이름 검색">
+                                    <input type="text" name ="keywords"  placeholder="ex)교육과정 및 학원이름 검색">
                                     <button type="submit"><i class="fad fa-search"></i></button>
                                  </div>
                               </form>
                            </div>
                            <!-- 검색부분 종료-->
+
+
+
 
 
                         </div>
