@@ -1,6 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-
 <!doctype html>
 <html class="no-js" lang="zxx">
    <head>
@@ -29,7 +28,6 @@
       <style>
          @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap');
          </style>
-      
    </head>
    <body>
       <!--[if lte IE 9]>
@@ -904,7 +902,6 @@
       <script src="../assets/js/search.js"></script><!--0103 카테고리 검색용 추가 찬주-->
       <script src="../assets/js/jquerySelectBox.js"></script><!--0104 ~순 추가 제이쿼리-->
       <script src="../assets/js/wishList.js"></script><!--0106 좋아요 버튼 관련 ajax-->
-      <script src="../assets/js/jquery-3.6.3.min.js"></script>
 
   
    </body>

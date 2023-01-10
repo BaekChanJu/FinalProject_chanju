@@ -16,7 +16,6 @@ public interface ReviewService {
     public  List<Object[]> avgStar();
     
 
-	
-    
+
 
 }

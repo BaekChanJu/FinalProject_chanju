@@ -1,6 +1,6 @@
 package com.example.controller;
 
-import java.util.List;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -12,7 +12,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.example.domain.AnnouncementVO;
-import com.example.domain.NewsVO;
+
 import com.example.persistence.AnnouncementRepository;
 import com.example.service.AnnouncementService;
 
