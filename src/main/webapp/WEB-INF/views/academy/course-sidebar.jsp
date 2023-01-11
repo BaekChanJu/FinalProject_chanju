@@ -411,9 +411,9 @@
 
                            <form id="selectForm" action=/academy/course-sidebar method="GET">
                               <select name="order">
-                                 <option >--선택--</option>
-                                 <option value="new">최신 등록순</option>
-                                 <option value="star">별점평균높은순</option>
+                                 <option >-- 선택 --</option>
+                                 <option value="new">최신등록순</option>
+                                 <option value="star">별점높은순</option>
                               </select>
                            </form>
 
@@ -456,6 +456,8 @@
                                                 </a><input type="hidden" id="like_check" value="1"></span>
                                              </div>
 
+
+                                             
                                                        <!-- 별점출력 부분 값 지정해주기-->
                                             <c:forEach items="${avg}" var="avg">
                                              <c:if test="${avg[0] == education.edId}" >
@@ -475,7 +477,7 @@
                                              </div>
                                              <h6><a href="instructor-details">${education.edName}</a></h6>
                                           </div>
-                                          <div class="course__tag-2 mt-15">
+                                          <div class="course__tag-2 mt-15">30
                                              <!--0106 여기에 해당하는 키워드(값들 꺼내서)들 넣기-->
                                            <span><i class="fal fa-tag"></i>
                                             ${education.edKeyword}</span>
@@ -654,7 +656,7 @@
                      <div class="course__sidebar pl-70">
                         <div class="course__sidebar-widget grey-bg">
                            <div class="course__sidebar-info">
-                              <h3 class="course__sidebar-title">All Curriculum</h3>
+                              <h3 class="course__sidebar-title">Keyword 검색</h3>
 
 
 

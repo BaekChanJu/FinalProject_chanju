@@ -1,6 +1,6 @@
 package com.example.controller;
 
-import java.time.LocalDateTime;
+
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,45 +37,42 @@ public class ReviewController {
      @GetMapping("/insertRV")
      @ResponseBody //ajax 쓰려고 리퀘스트 바디
      public String insertRV(ReviewVO vo, 
-    		 @RequestParam String edId,@PageableDefault(size = 6) Pageable paging,String re) {
+           @RequestParam String edId,@PageableDefault(size = 6) Pageable paging,String re) {
         System.out.println("리뷰뷰뷴 : " +   vo);
-        
-        vo.setReDate(LocalDateTime.now());
-        
+
         reviewService.saveRV(vo);
-        
-       
-        
+
         //가져오는거 넣기
         String temp_ed_id = String.valueOf(vo.getEdId());
         System.out.println(temp_ed_id);
-        Page<ReviewVO> list = reviewRepository.getReviewAndPaging(paging,temp_ed_id );
+        // Page<ReviewVO> list = reviewRepository.getReviewAndPaging(paging,temp_ed_id);
+        Page<ReviewVO> list = reviewRepository.getReviewAndPaging2(paging,temp_ed_id );
         List<ReviewVO> reviewList = list.getContent();
         Gson gson = new Gson();
         JsonArray jArray = new JsonArray();
         
-        System.out.println("겟컨확인"+ reviewList.size());
-      	//for(int i=0 ; i<reviewList.size(); i++) {
+        System.out.println("---------------겟컨확인"+ reviewList.size());
+         //for(int i=0 ; i<reviewList.size(); i++) {
         for( ReviewVO rvo : reviewList ) {
-      		
-      		JsonObject object = new JsonObject();
-      		
-      		
-      		object.addProperty("Mid", String.valueOf(rvo.getMemId()));
-      		object.addProperty("star", String.valueOf(rvo.getStar()));
-      		object.addProperty("reDate", String.valueOf(rvo.getReDate()));
-      		object.addProperty("reContent", String.valueOf(rvo.getReContent()));
-      		
-      		
-      		jArray.add(object);
-      		//System.out.println("잘붙었나?");
-      	}
-      	
-      	String json = gson.toJson(jArray);
+            
+            JsonObject object = new JsonObject();
+            
+            
+            object.addProperty("memIdInt", String.valueOf(rvo.getMemIdInt()));
+            object.addProperty("star", String.valueOf(rvo.getStar()));
+            object.addProperty("reDate", String.valueOf(rvo.getReDate()));
+            object.addProperty("reContent", String.valueOf(rvo.getReContent()));
+            
+            
+            jArray.add(object);
+            //System.out.println("잘붙었나?");
+         }
+         
+         String json = gson.toJson(jArray);
         // select
         // json
         // 문자열로 변환해서 리턴
-      	System.out.println("json의 값은???" + json);
+         System.out.println("json의 값은???" + json);
          return json ;   //리턴 ok값은 섯세스의 리절트라는 이름으로 보내봄  
      }//end of insertRV
      
