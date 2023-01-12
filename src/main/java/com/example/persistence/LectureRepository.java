@@ -51,6 +51,13 @@ public interface LectureRepository extends CrudRepository<LectureVO, Integer> {
 	Page<LectureVO> starDesc(Pageable paging, 
 			String keywords, String order);
 
+	
+	
+	
+	
+	// 
+	List<LectureVO> findByTcId( Integer teacherId);
+	
 
 
 

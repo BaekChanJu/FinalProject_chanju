@@ -1,10 +1,13 @@
 package com.example.domain;
 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.PrePersist;
 import javax.persistence.Table;
 
 import lombok.Data;
@@ -40,5 +43,18 @@ public class TeacherVO {
 	
 	@Column(name="t_keyword", nullable=false)
 	private String tcKeyword;
+	
+	
+	@Column(name="t_regdate")
+	private Date tcDate;
 
+	@Column(name="t_tf", nullable=false)
+	private boolean tc_tf;
+	
+	
+	@PrePersist
+	public void beforeCreate() {
+		tcDate = new Date();
+	}
+	
 }

@@ -62,8 +62,6 @@ public class EducationController {
        elist = eduRepo.AllSearchAndPagingQuery(paging, keywords, order);
       }else if(order.equals("star")) {
        elist = eduRepo.starDesc(paging, keywords, order);
-      }else if(order.equals("new")){
-    	  elist = eduRepo.AllSearchAndPagingQuery(paging, keywords, order);
       }
       
       //현재페이지
@@ -113,7 +111,6 @@ public class EducationController {
         System.out.println(temp_ed_id);
       //상세페이지 리뷰정보용 + 페이징
       Page<ReviewVO> reviewList = reviewRepository.getReviewAndPaging(paging, temp_ed_id);
-      System.out.println("reviewList : " + reviewList);
       //현재페이지
       int pageNumber=((Slice<ReviewVO>) reviewList).getPageable().getPageNumber();
       //총페이지수

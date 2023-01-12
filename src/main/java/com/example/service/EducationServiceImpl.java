@@ -20,13 +20,11 @@ public class EducationServiceImpl implements EducationService {
       System.out.println(list);
       return list;
    }
-   
 
    @Override
    public EducationVO getBoard(EducationVO vo) {
       return eduRepo.findById(vo.getEdId()).get();
    }
-   
    
    //경호
    //관리자페이지

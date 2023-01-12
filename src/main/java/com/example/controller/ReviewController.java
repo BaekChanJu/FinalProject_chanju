@@ -1,6 +1,6 @@
 package com.example.controller;
 
-
+import java.time.LocalDateTime;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,26 +39,27 @@ public class ReviewController {
      public String insertRV(ReviewVO vo, 
            @RequestParam String edId,@PageableDefault(size = 6) Pageable paging,String re) {
         System.out.println("리뷰뷰뷴 : " +   vo);
-
+        
         reviewService.saveRV(vo);
-
+        
+       
+        
         //가져오는거 넣기
         String temp_ed_id = String.valueOf(vo.getEdId());
         System.out.println(temp_ed_id);
-        // Page<ReviewVO> list = reviewRepository.getReviewAndPaging(paging,temp_ed_id);
-        Page<ReviewVO> list = reviewRepository.getReviewAndPaging2(paging,temp_ed_id );
+        Page<ReviewVO> list = reviewRepository.getReviewAndPaging(paging,temp_ed_id );
         List<ReviewVO> reviewList = list.getContent();
         Gson gson = new Gson();
         JsonArray jArray = new JsonArray();
         
-        System.out.println("---------------겟컨확인"+ reviewList.size());
+        System.out.println("겟컨확인"+ reviewList.size());
          //for(int i=0 ; i<reviewList.size(); i++) {
         for( ReviewVO rvo : reviewList ) {
             
             JsonObject object = new JsonObject();
             
             
-            object.addProperty("memIdInt", String.valueOf(rvo.getMemIdInt()));
+            object.addProperty("Mid", String.valueOf(rvo.getMemIdInt()));
             object.addProperty("star", String.valueOf(rvo.getStar()));
             object.addProperty("reDate", String.valueOf(rvo.getReDate()));
             object.addProperty("reContent", String.valueOf(rvo.getReContent()));

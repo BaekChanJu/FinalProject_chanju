@@ -156,10 +156,12 @@
                            </nav>
                         </div>
                         <div class="header__search p-relative ml-50 d-none d-md-block">
-                           <form id = "main" action=/instructor method="GET">
+
+                           <form id = "main" action=/lecture/teacher/instructor method="GET">
                               <input type="text" name ="keywords"  placeholder="ex)교육과정 및 학원이름 검색">
                               <button type="submit"><i class="fad fa-search"></i></button>
                            </form>
+
                            <div class="header__cart">
                               <a href="javascript:void(0);" class="cart-toggle-btn">
                                  <div class="header__cart-icon">

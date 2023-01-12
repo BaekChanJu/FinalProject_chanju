@@ -27,7 +27,7 @@ public class MemberController {
 	public String insertMember(MemberVO vo) {
 		System.out.println(vo);   //회원가입 할 때 생성되는 vo
 		memberService.insertMember(vo);   
-		return "redirect:academy/index-2";   
+		return "redirect:index";   
 	}
 
 	//로그인

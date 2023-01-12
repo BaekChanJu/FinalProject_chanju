@@ -33,19 +33,19 @@ public class ReviewServiceImpl implements ReviewService {
       return avgStar;        
    }
 
-	//@Override
-	//public Page<ReviewVO> a(Pageable paging, String temp_ed_id) {
-		//return reviewRepository.getReviewAndPaging(paging, temp_ed_id);
-	//}
+   //@Override
+   //public Page<ReviewVO> a(Pageable paging, String temp_ed_id) {
+      //return reviewRepository.getReviewAndPaging(paging, temp_ed_id);
+   //}
    
 
-	   //별점 평균값
-	   @Transactional
-	   public  List<Object[]> avgStarvc(){
+      //별점 평균값
+      @Transactional
+      public  List<Object[]> avgStarvc(){
 
-	      List<Object[]> avgStarvc = reviewRepository.avgStarvc();
-	      return avgStarvc;        
-	   }
+         List<Object[]> avgStarvc = reviewRepository.avgStarvc();
+         return avgStarvc;        
+      }
 
 
 

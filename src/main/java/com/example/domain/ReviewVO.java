@@ -7,8 +7,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.PrePersist;
 import javax.persistence.Table;
 
@@ -23,13 +21,11 @@ public class ReviewVO {
    @Column(name="re_id")
    private Integer RId;
    
-   //@ManyToOne
    @Column(name="m_idint")
-   private Integer memIdInt;
+   private String memIdInt;
    
    @Column(name="m_idstring")
    private String memIdString;
-   
    
    @Column(name="re_date")
    private Date reDate; 
@@ -46,9 +42,9 @@ public class ReviewVO {
    private Integer edId;
    
    @PrePersist
-   public void beforeCreate() {
-      reDate = new Date();
-   }
+	public void beforeCreate() {
+	   reDate = new Date();
+	}
    
 
 }

@@ -1,34 +1,26 @@
-
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
 <!doctype html>
 <html class="no-js" lang="zxx">
    <head>
-     
       <meta charset="utf-8">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       <title>Educal – Online Learning and Education HTML5 Template </title>
       <meta name="description" content="">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <!-- Place favicon.ico in the root directory -->
-      <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.png">
+      <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
       <!-- CSS here -->
-      <link rel="stylesheet" href="../assets/css/preloader.css">
-      <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
-      <link rel="stylesheet" href="../assets/css/meanmenu.css">
-      <link rel="stylesheet" href="../assets/css/animate.min.css">
-      <link rel="stylesheet" href="../assets/css/owl.carousel.min.css">
-      <link rel="stylesheet" href="../assets/css/swiper-bundle.css">
-      <link rel="stylesheet" href="../assets/css/backToTop.css">
-      <link rel="stylesheet" href="../assets/css/jquery.fancybox.min.css">
-      <link rel="stylesheet" href="../assets/css/fontAwesome5Pro.css">
-      <link rel="stylesheet" href="../assets/css/elegantFont.css">
-      <link rel="stylesheet" href="../assets/css/default.css">
-      <link rel="stylesheet" href="../assets/css/style.css">
-      <style>
-         @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap');
-         </style>
-      
+      <link rel="stylesheet" href="assets/css/preloader.css">
+      <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+      <link rel="stylesheet" href="assets/css/meanmenu.css">
+      <link rel="stylesheet" href="assets/css/animate.min.css">
+      <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+      <link rel="stylesheet" href="assets/css/swiper-bundle.css">
+      <link rel="stylesheet" href="assets/css/backToTop.css">
+      <link rel="stylesheet" href="assets/css/jquery.fancybox.min.css">
+      <link rel="stylesheet" href="assets/css/fontAwesome5Pro.css">
+      <link rel="stylesheet" href="assets/css/elegantFont.css">
+      <link rel="stylesheet" href="assets/css/default.css">
+      <link rel="stylesheet" href="assets/css/style.css">
    </head>
    <body>
       <!--[if lte IE 9]>
@@ -42,9 +34,9 @@
          <div id="loading-center">
             <div id="loading-center-absolute">
                <div class="loading-content">
-                  <img class="loading-logo-text" src="../assets/img/logo/logo-text-2.png" alt="">
+                  <img class="loading-logo-text" src="assets/img/logo/logo-text-2.png" alt="">
                   <div class="loading-stroke">
-                     <img class="loading-logo-icon" src="../assets/img/logo/logo-icon.png" alt="">
+                     <img class="loading-logo-icon" src="assets/img/logo/logo-icon.png" alt="">
                   </div>
                </div>
             </div>
@@ -69,8 +61,8 @@
                      <div class="header__left d-flex">
                         <div class="logo">
                            <a href="index">
-                              <img class="logo-white" src="../assets/img/logo/logo-2.png" alt="logo">
-                              <img class="logo-black" src="../assets/img/logo/logo.png" alt="logo">
+                              <img class="logo-white" src="assets/img/logo/logo-2.png" alt="logo">
+                              <img class="logo-black" src="assets/img/logo/logo.png" alt="logo">
                            </a>
                         </div>
                         <div class="header__category d-none d-lg-block">
@@ -159,8 +151,8 @@
                            </nav>
                         </div>
                         <div class="header__search p-relative ml-50 d-none d-md-block">
-                           <form id = "main" action=/instructor method="GET">
-                              <input type="text" name ="keywords"  placeholder="ex)교육과정 및 학원이름 검색">
+                           <form action="#">
+                              <input type="text" placeholder="Search...">
                               <button type="submit"><i class="fad fa-search"></i></button>
                            </form>
                            <div class="header__cart">
@@ -209,7 +201,7 @@
                      <li>
                         <div class="cartmini__thumb">
                            <a href="#">
-                              <img src="../assets/img/course/sm/cart-1.jpg" alt="">
+                              <img src="assets/img/course/sm/cart-1.jpg" alt="">
                            </a>
                         </div>
                         <div class="cartmini__content">
@@ -228,7 +220,7 @@
                      <li>
                         <div class="cartmini__thumb">
                            <a href="#">
-                              <img src="../assets/img/course/sm/cart-2.jpg" alt="">
+                              <img src="assets/img/course/sm/cart-2.jpg" alt="">
                            </a>
                         </div>
                         <div class="cartmini__content">
@@ -247,7 +239,7 @@
                      <li>
                         <div class="cartmini__thumb">
                            <a href="#">
-                              <img src="../assets/img/course/sm/cart-3.jpg" alt="">
+                              <img src="assets/img/course/sm/cart-3.jpg" alt="">
                            </a>
                         </div>
                         <div class="cartmini__content">
@@ -294,7 +286,7 @@
             <div class="sidebar__content">
                <div class="logo mb-40">
                   <a href="index">
-                  <img src="../assets/img/logo/logo.png" alt="logo">
+                  <img src="assets/img/logo/logo.png" alt="logo">
                   </a>
                </div>
                <div class="mobile-menu fix"></div>
@@ -327,16 +319,16 @@
       <main>
 
          <!-- page title area start -->
-         <section class="page__title-area page__title-height page__title-overlay d-flex align-items-center" data-background="../assets/img/page-title/page-title.jpg">
+         <section class="page__title-area page__title-height page__title-overlay d-flex align-items-center" data-background="assets/img/page-title/page-title.jpg">
             <div class="container">
                <div class="row">
                   <div class="col-xxl-12">
                      <div class="page__title-wrapper mt-110">
-                        <h3 class="page__title">선생님리스트</h3>                         
+                        <h3 class="page__title">Instructor</h3>                         
                         <nav aria-label="breadcrumb">
                            <ol class="breadcrumb">
                               <li class="breadcrumb-item"><a href="index">Home</a></li>
-                              <li class="breadcrumb-item active" aria-current="page">선생님리스트</li>
+                              <li class="breadcrumb-item active" aria-current="page">Instructor</li>
                            </ol>
                         </nav>
                      </div>
@@ -352,133 +344,151 @@
                <div class="row">
                   <div class="col-xxl-6 offset-xxl-3">
                      <div class="section__title-wrapper text-center mb-60">
-                        <h2 class="section__title">한눈에 보는 <br>
-                           최고의  <span class="yellow-bg"> 선생님들 <img src="../assets/img/shape/yellow-bg-2.png" alt="">  </span> <br>
+                        <h2 class="section__title">Our Most <br>
+                           Popular <span class="yellow-bg"> Teachers <img src="assets/img/shape/yellow-bg-2.png" alt="">  </span> <br>
                         </h2>
                         <p>You don't have to struggle alone, you've got our assistance and help.</p>
-                        
                      </div>
                   </div>
                </div>
-
-
-
-
-
-
-               <!-- 선생님 리스트 나오는 부분-->
-               <c:forEach items="${teacherList}" var="teacherVO">
-                
                <div class="row">
-                  
                   <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
-                     
                      <div class="teacher__item text-center grey-bg-5 transition-3 mb-30">
-                       
                         <div class="teacher__thumb w-img fix">
-                        
-                           <a href="instructor-details?teacherId=${teacherVO.teacherId}"> 
-                              <img src="../assets/img/course/${teacherVO.tcPic}" alt="" width='310' height='300' > <!-- 사진 지정 -->
+                           <a href="#">
+                              <img src="assets/img/teacher/teacger-1.jpg" alt="">
                            </a>
                         </div>
                         <div class="teacher__content">
-                          
-                           <h3 class="teacher__title">${teacherVO.tcName}</h3> 
-                           <span> 선생님 </span> </br>
-                           <span> ${teacherVO.tcKeyword} </span>
-                           
+                           <h3 class="teacher__title">Lillian Walsh,</h3> 
+                           <span> CO Founder</span>
 
-
-                           
-                        </div>
-
-                        
-                     </div>
-                  </div>
-               </div>
-               </c:forEach>
-               
-                             <!-- 페이징 영역 시작  경호형꺼 받음 0104-->
-                         
-                             <div class="row">
-                              <div class="col-xxl-12">
-                                 <div class="basic-pagination wow fadeInUp mt-30" data-wow-delay=".2s">
-                                    <ul class="d-flex align-items-center"> 
-                                       <!-- first : 해당 페이지가 첫번째 페이지인지 여부(true/false로 구분)-->
-                                       <!-- 해당페이지가 첫번째인 경우에는 아무것도 설정안함-->
-                                       <!-- 해당 페이지가 첫번째 페이지가 아닌경우-->
-                                       <!-- 맨처음페이지로 이동 -->
-                                       <c:choose>
-                                       <c:when test="${elist.first}"></c:when>
-                                       
-                                       <c:otherwise>
-                                       <li class="prev">
-                                          <a href="instructor?page=1" class="link-btn link-prev">
-                                             Prev
-                                             <i class="arrow_left"></i>
-                                             <i class="arrow_left"></i>
-                                          </a>
-                                       </li>
-                                    </c:otherwise>
-                                 </c:choose>
-   
-                              <!-- 페이지 그룹 -->
-                              <!-- 시작블럭을 반복시작 인덱스로 종료블럭을 반복종료 인덱스로 설정  -->
-                              <c:forEach begin="${startBlockPage}" end="${endBlockPage}" var="i">
-                              <!-- 현재페이지의 +1이 i랑 같은 경우 다음페이지로 이동하게 설정 -->
-                              <!-- 현재페이지의 +1이 i랑 다른 경우 다음 페이지로 이동하게 설정-->
-                              <c:choose>
-                              <c:when test="${pageNumber+1 == i}">
-                                 <li>
-                                    <a href="instructor?page=${i}&keywords=${param.keywords}"><span>${i}</span></a>
-                                 </li>
-                              </c:when>
-                              <c:otherwise>
-                                 <li><a href="instructor?page=${i}&keywords=${param.keywords}"><span>${i}</span></a></li>
-                              </c:otherwise>
-                              </c:choose>
-                              </c:forEach>
-                              <!-- 맨마지막페이지 -->
-                              <!-- last : 해당 페이지가 마지막 페이지인지 여부(true/false로 구분)-->
-                              <!-- 해당페이지가 마지막인 경우에는 아무것도 설정안함-->
-                              <!-- 해당 페이지가 마지막 페이지가 아닌경우-->
-                              <!-- 마지막페이지로 이동 -->
-                              <c:choose>     
-                              <c:when test="${elist.last}"></c:when>
-                              <c:otherwise>
-                                 <li class="next">
-                                    <a href="instructor?page=${totalPages}" class="link-btn">
-                                    Next
-                                    <i class="arrow_right"></i>
-                                    <i class="arrow_right"></i>
-                                    </a>
-                                 </li>
-                              </c:otherwise>
-                              </c:choose>
-                                    </ul>
-                                 </div>
-                              </div>
+                           <div class="teacher__social">
+                              <ul>
+                                 <li><a href="#"><i class="social_facebook"></i></a></li>
+                                 <li><a href="#"><i class="social_twitter"></i></a></li>
+                                 <li><a href="#"><i class="social_vimeo"></i></a></li>
+                              </ul>
                            </div>
                         </div>
                      </div>
-   
-   
-   
-                            
-   
+                  </div>
+                  <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
+                     <div class="teacher__item text-center grey-bg-5 transition-3 mb-30">
+                        <div class="teacher__thumb w-img fix">
+                           <a href="#">
+                              <img src="assets/img/teacher/teacher-2.jpg" alt="">
+                           </a>
+                        </div>
+                        <div class="teacher__content">
+                           <h3 class="teacher__title">Kelly Franklin,</h3> 
+                           <span>Desginer</span>
+
+                           <div class="teacher__social">
+                              <ul>
+                                 <li><a href="#"><i class="social_facebook"></i></a></li>
+                                 <li><a href="#"><i class="social_twitter"></i></a></li>
+                                 <li><a href="#"><i class="social_vimeo"></i></a></li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
+                     <div class="teacher__item text-center grey-bg-5 transition-3 mb-30">
+                        <div class="teacher__thumb w-img fix">
+                           <a href="#">
+                              <img src="assets/img/teacher/teacher-3.jpg" alt="">
+                           </a>
+                        </div>
+                        <div class="teacher__content">
+                           <h3 class="teacher__title">Hilary Ouse,</h3> 
+                           <span>Markater</span>
+
+                           <div class="teacher__social">
+                              <ul>
+                                 <li><a href="#"><i class="social_facebook"></i></a></li>
+                                 <li><a href="#"><i class="social_twitter"></i></a></li>
+                                 <li><a href="#"><i class="social_vimeo"></i></a></li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
+                     <div class="teacher__item text-center grey-bg-5 transition-3 mb-30">
+                        <div class="teacher__thumb w-img fix">
+                           <a href="#">
+                              <img src="assets/img/teacher/teacher-5.jpg" alt="">
+                           </a>
+                        </div>
+                        <div class="teacher__content">
+                           <h3 class="teacher__title">Lillian Walsh,</h3> 
+                           <span>CO Founder</span>
+
+                           <div class="teacher__social">
+                              <ul>
+                                 <li><a href="#"><i class="social_facebook"></i></a></li>
+                                 <li><a href="#"><i class="social_twitter"></i></a></li>
+                                 <li><a href="#"><i class="social_vimeo"></i></a></li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
+                     <div class="teacher__item text-center grey-bg-5 transition-3 mb-30">
+                        <div class="teacher__thumb w-img fix">
+                           <a href="#">
+                              <img src="assets/img/teacher/teacher-4.jpg" alt="">
+                           </a>
+                        </div>
+                        <div class="teacher__content">
+                           <h3 class="teacher__title">Shahnewaz,</h3> 
+                           <span>Web Developer</span>
+
+                           <div class="teacher__social">
+                              <ul>
+                                 <li><a href="#"><i class="social_facebook"></i></a></li>
+                                 <li><a href="#"><i class="social_twitter"></i></a></li>
+                                 <li><a href="#"><i class="social_vimeo"></i></a></li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
+                     <div class="teacher__item text-center grey-bg-5 transition-3 mb-30">
+                        <div class="teacher__thumb w-img fix">
+                           <a href="#">
+                              <img src="assets/img/teacher/teacher-6.jpg" alt="">
+                           </a>
+                        </div>
+                        <div class="teacher__content">
+                           <h3 class="teacher__title">Nicola Tesla,</h3> 
+                           <span>Engineer</span>
+
+                           <div class="teacher__social">
+                              <ul>
+                                 <li><a href="#"><i class="social_facebook"></i></a></li>
+                                 <li><a href="#"><i class="social_twitter"></i></a></li>
+                                 <li><a href="#"><i class="social_vimeo"></i></a></li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
             </div>
          </section>
          <!-- teacher area end -->
-
-
-         
 
          <!-- banner area start -->
          <section class="banner__area pb-80">
             <div class="container">
                <div class="row">
                   <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
-                     <div class="banner__item p-relative mb-40" data-background="../assets/img/banner/banner-bg-1.jpg">
+                     <div class="banner__item p-relative mb-40" data-background="assets/img/banner/banner-bg-1.jpg">
                         <div class="banner__content">
                            <span>Free</span>
                            <h3 class="banner__title">
@@ -487,12 +497,12 @@
                            <a href="course-grid" class="e-btn e-btn-2">View Courses</a>
                         </div>
                         <div class="banner__thumb d-none d-sm-block d-md-none d-lg-block">
-                           <img src="../assets/img/banner/banner-img-1.png" alt="">
+                           <img src="assets/img/banner/banner-img-1.png" alt="">
                         </div>
                      </div>
                   </div>
                   <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
-                     <div class="banner__item p-relative mb-40" data-background="../assets/img/banner/banner-bg-2.jpg">
+                     <div class="banner__item p-relative mb-40" data-background="assets/img/banner/banner-bg-2.jpg">
                         <div class="banner__content">
                            <span class="orange">new</span>
                            <h3 class="banner__title">
@@ -501,7 +511,7 @@
                            <a href="course-grid" class="e-btn e-btn-2">Find Out More</a>
                         </div>
                         <div class="banner__thumb banner__thumb-2 d-none d-sm-block d-md-none d-lg-block">
-                           <img src="../assets/img/banner/banner-img-2.png" alt="">
+                           <img src="assets/img/banner/banner-img-2.png" alt="">
                         </div>
                      </div>
                   </div>
@@ -522,7 +532,7 @@
                               <div class="footer__widget-head mb-22">
                                  <div class="footer__logo">
                                     <a href="index">
-                                       <img src="../assets/img/logo/logo-2.png" alt="">
+                                       <img src="assets/img/logo/logo-2.png" alt="">
                                     </a>
                                  </div>
                               </div>
@@ -617,24 +627,21 @@
          </footer>
          <!-- footer area end -->
       <!-- JS here -->
-      <script src="../assets/js/vendor/jquery-3.5.1.min.js"></script>
-      <script src="../assets/js/vendor/waypoints.min.js"></script>
-      <script src="../assets/js/bootstrap.bundle.min.js"></script>
-      <script src="../assets/js/jquery.meanmenu.js"></script>
-      <script src="../assets/js/swiper-bundle.min.js"></script>
-      <script src="../assets/js/owl.carousel.min.js"></script>
-      <script src="../assets/js/jquery.fancybox.min.js"></script>
-      <script src="../assets/js/isotope.pkgd.min.js"></script>
-      <script src="../assets/js/parallax.min.js"></script>
-      <script src="../assets/js/backToTop.js"></script>
-      <script src="../assets/js/jquery.counterup.min.js"></script>
-      <script src="../assets/js/ajax-form.js"></script>
-      <script src="../assets/js/wow.min.js"></script>
-      <script src="../assets/js/imagesloaded.pkgd.min.js"></script>
-      <script src="../assets/js/main.js"></script>
-      <script src="../assets/js/search.js"></script><!--0103 카테고리 검색용 추가 찬주-->
-      <script src="../assets/js/jquery-3.6.3.min.js"></script>
-
+      <script src="assets/js/vendor/jquery-3.5.1.min.js"></script>
+      <script src="assets/js/vendor/waypoints.min.js"></script>
+      <script src="assets/js/bootstrap.bundle.min.js"></script>
+      <script src="assets/js/jquery.meanmenu.js"></script>
+      <script src="assets/js/swiper-bundle.min.js"></script>
+      <script src="assets/js/owl.carousel.min.js"></script>
+      <script src="assets/js/jquery.fancybox.min.js"></script>
+      <script src="assets/js/isotope.pkgd.min.js"></script>
+      <script src="assets/js/parallax.min.js"></script>
+      <script src="assets/js/backToTop.js"></script>
+      <script src="assets/js/jquery.counterup.min.js"></script>
+      <script src="assets/js/ajax-form.js"></script>
+      <script src="assets/js/wow.min.js"></script>
+      <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+      <script src="assets/js/main.js"></script>
    </body>
 </html>
 

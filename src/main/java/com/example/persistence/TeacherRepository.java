@@ -7,6 +7,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 
+import com.example.domain.LectureVO;
 import com.example.domain.TeacherVO;
 
 public interface TeacherRepository extends CrudRepository<TeacherVO, Integer>{
@@ -28,6 +29,11 @@ public interface TeacherRepository extends CrudRepository<TeacherVO, Integer>{
             String keywords);
 
 	 
+	 
+	TeacherVO findByTeacherId(Integer teacherId);
+	 
+	 
+	
 	 
 	
 }
