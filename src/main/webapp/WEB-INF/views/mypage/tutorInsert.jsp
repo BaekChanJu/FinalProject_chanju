@@ -549,57 +549,59 @@ prefix='c' uri="http://java.sun.com/jsp/jstl/core"%>
                      <div class="container-fluid">
                       <div class="card shadow mb-4">
                           <div class="card-header py-3">
-                              <h6 class="m-0 font-weight-bold text-primary">선생정보 입력</h6>
+                              <h6 class="m-0 font-weight-bold text-primary">강사 정보입력</h6>
                           </div>
                           <div class="card-body">
                               <div class="table-responsive">
 
                                 <!--선생님 등록 form 태그 시작-->
-                            
+                                <form id = "teacherForm" action="tutorInsert" method="post">
                                   <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                       
                                     <tbody id="itemRegisterTbl">
                                           <tr> 
-                                              <td class="tblTitle" colspan="3" style="font-size: 16pt; font-weight: bold;">선생정보</td> 
+                                              <td class="tblTitle" colspan="3" style="font-size: 16pt; font-weight: bold;">강사 정보</td> 
                                           </tr>
                                           <tr>
-                                            <form id = "main" action=tutorinsert method="GET">
+                                        
                                             <!-- readonly 넣으면 값을 못바꿈 회원가입했을때 이름가져오게 한다음 고정시킬까?-->
                                               <th scope="row" style="width:20%;">강사 이름</th>
-                                              <td class="iValue" colspan="2"><input type="text" name="tcName" required /></td>
+                                              <td class="iValue" colspan="2"><input type="text" name="tcName"  id = "tcName"  /></td>
                                           </tr>
                                           <tr>
                                               <th scope="row">강사 경력</th>
                                               <td class="iValue" colspan="2"><input type="text" 
-                                                name="tcSpec" required style = "width:500px;"  placeholder="ex) 00대학교 학사 / (주)00근무 / 00학원강사" ></td>
+                                                name="tcSpec"  id = "tcSpec" style = "width:500px;"  placeholder="ex) 00대학교 학사 / (주)00근무 / 00학원강사" ></td>
                                           </tr>
                                           <tr>
                                               <th scope="row">수업 키워드</th>
                                               <td class="iValue" colspan="2"><input type="text" 
-                                                name="tcKeyword"  required style = "width:500px;" placeholder="ex) javascript / 비동기처리 / JAVA"/></td>
+                                                name="tcKeyword"  id = "tcKeyword" style = "width:500px;" placeholder="ex) javascript / 비동기처리 / JAVA"/></td>
                                           </tr>
                                           <tr>
-                                              <th scope="row">선생님 소개글</th>
+                                              <th scope="row">강사 소개글</th>
                                               <td class="iValue" colspan="2"><textarea type="text" 
-                                                name="tcIntro" style = "width:500px;height:200px"></textarea></td>
+                                                name="tcIntro"  id = "tcIntro" style = "width:500px;height:200px"></textarea></td>
                                           </tr>
                                            <tr>
-                                              <th scope="row" style="vertical-align: middle;">본인사진 등록</th>
+                                              <th scope="row" style="vertical-align: middle;">강사 사진등록</th>
                                               <td class="iValue" id="addImg"  colspan="2">
                                                  <input type="file" name="tcPic" id="input-file"/></td>
                                           </tr>
                                           
                                           <tr>
+
                                               <td colspan="3" style="text-align: center;" >
-                                                  <input type="submit" value="등록" style="background-color : #4e73df; width:70px; height:30px; font-size: 10pt; color: white; border-style: none; border-radius: 3px;" >
+                                                  <input type="button" value="등록" data-bs-toggle="modal" data-bs-target="#exampleModal" style="background-color : #4e73df; width:70px; height:30px; font-size: 10pt; color: white; border-style: none; border-radius: 3px;" >
                                               </td>
+
                                           </tr>
                                       </tbody>
                                   </table>
-                                  </form>
-                              </div>
-                          </div>
-                      </div>
+                                </form><!--end of form-->
+                            </div>
+                        </div>
+                    </div>
                       
 
 
@@ -616,6 +618,39 @@ prefix='c' uri="http://java.sun.com/jsp/jstl/core"%>
       <!-- Cart Area End-->
 
     </main>
+
+<!-- modal: HonestQuestion -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+     <div class="modal-content">
+       
+           <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">솔직 질문</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+           </div>
+           <div class="modal-body">
+              <input type="hidden" name="memIdInt" value="${sessionScope.memIdInt}">
+              <div class="mb-3">
+                 <label class="col-form-label">입력 정보를 등록하시겠습니까?</label>
+                 <div class="hq-category">
+                    <div class="div2">강사 이름 > 필수</div>
+                    <div class="div2">강사 경력 > 필수</div>
+                    <div class="div2">수업 키워드 > 필수</div>
+                    <div class="div2">선생님 소개글  > 필수</div>
+                    <div class="div2">사진파일  > 필수</div>
+                 </div>
+                 <input type="hidden" id="hq_cat" name="hq_category">
+              </div>
+              
+           </div>
+           <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" onclick="teacherInsert();" >등록하기</button>
+           </div>
+       
+     </div>
+  </div>
+</div>
 
     <!-- footer area start -->
     <footer>
@@ -752,6 +787,8 @@ prefix='c' uri="http://java.sun.com/jsp/jstl/core"%>
     <script src="../assets/js/imagesloaded.pkgd.min.js"></script>
     <script src="../assets/js/main.js"></script>
     <script src="../assets/js/wishList.js"></script>
+    <script src="../assets/js/alljs.js"></script> <!--찬주 추가 모달 버튼용-->
+    
     <!--0106 좋아요 버튼 관련 ajax-->
     <!-- Bootstrap core JavaScript-->
     <script src="../admin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

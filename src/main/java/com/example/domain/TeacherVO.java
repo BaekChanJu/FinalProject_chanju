@@ -25,31 +25,31 @@ public class TeacherVO {
 	private Integer teacherId;
 	
 	
-	@Column(name="t_pic", nullable=false)
+	@Column(name="t_pic" )
 	private String tcPic;
 	
 	
-	@Column(name="t_name", nullable=false)
+	@Column(name="t_name")
 	private String tcName;
 	
 	
-	@Column(name="t_intro", nullable=false)
+	@Column(name="t_intro")
 	private String tcIntro;
 	
 	
-	@Column(name="t_spec", nullable=false)
+	@Column(name="t_spec" )
 	private String tcSpec;
 	
 	
-	@Column(name="t_keyword", nullable=false)
+	@Column(name="t_keyword" )
 	private String tcKeyword;
 	
 	
 	@Column(name="t_regdate")
 	private Date tcDate;
 
-	@Column(name="t_tf", nullable=false)
-	private boolean tc_tf;
+	@Column(name="t_tf")
+	private Integer tcTruefalse;
 	
 	
 	@PrePersist

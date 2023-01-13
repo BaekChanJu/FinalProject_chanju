@@ -1,13 +1,16 @@
 package com.example.service;
 
+import java.util.List;
+
 import com.example.domain.TeacherVO;
 
 public interface TeacherService {
 
-	//선생님 등록 구현 인터페이스
-	void insertTutor(TeacherVO tvo);
 	
 	
+	 public void insertTeacher(TeacherVO tvo);
 	 
+	 public List<TeacherVO> AllTeacher();
 	 
+	 public void updateTeacher(TeacherVO tvo);
 }

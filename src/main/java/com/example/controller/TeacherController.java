@@ -77,6 +77,7 @@ public class TeacherController {
 	   
 	   
 	   
+	   
 	   //선생님 상세페이지
 	   @GetMapping("/instructor-details")
 	   public String getDetailsTeacher(Model m, Integer teacherId) {
@@ -100,25 +101,8 @@ public class TeacherController {
 	   
 	   
 	   
-	   //선생님등록
-	   @GetMapping("tutorinsert")
-	   public String tutorinsert(Model m, TeacherVO tvo) {
-		   System.out.println(tvo);
-		   
-		   teacherService.insertTutor(tvo);
-		   
-		   
-		   return "redirect:/mypage/tutorInsert";
-	   }
-	   
 	   
 
-	  
-	   
-	   
-	   
-	   
-	   
 	   
 	   
 	   
