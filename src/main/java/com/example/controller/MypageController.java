@@ -49,7 +49,13 @@ public class MypageController {
 			return "redirect:/mypage/tutorInsert";   
 		}
 
-
+	   
+	   //마이페이지 작성글관리에서 학원에 단 리뷰번호만!
+	   
+	   public String getEdReview() {
+		   
+		   return null;
+	   }
 	   
 	   
 	

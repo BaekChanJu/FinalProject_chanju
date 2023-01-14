@@ -33,20 +33,6 @@ public class AdminController {
 	@Autowired
 	private  TeacherRepository teacherRepository;
 
-	//경호
-	//	//상품등록 페이지로 이동
-	//	@RequestMapping("/academyRegister")
-	//	public String itemRegister() {	
-	//		return "admin/academyRegister";
-	//	}
-	//경호
-	//상품목록 페이지로 이동
-	@RequestMapping("/academyList")
-	public String itemList(Model m) {	
-		List<EducationVO> list = eduService.selectAllAcademy();
-		m.addAttribute("result", list);
-		return "admin/academyList";
-	}
 
 	//경주
 	//관리자에 공지 목록띄움
@@ -132,6 +118,27 @@ public class AdminController {
 		return "redirect:/admin/teacherlist";
 	}
 	
+	
+	//경호
+	   //학원등록 페이지로 이동
+	   @RequestMapping("/academyRegister")
+	   public String academyRegister(EducationVO vo, Model m) {
+	      System.out.println("academy Register : " + vo);
+	      //교육과정에 대한 전체값 가져오기
+	      EducationVO result = eduService.getBoard(vo);
+	      System.out.println("result : " + result);
+	      //jsp 파일에 붙이기
+	      m.addAttribute("education", result);
+	      return "/admin/academyRegister";
+	   }
+	   //경호
+	   //학원목록 페이지로 이동
+	   @RequestMapping("/academyList")
+	   public String academyList(Model m) {   
+	      List<EducationVO> list = eduService.selectAllAcademy();
+	      m.addAttribute("result", list);
+	      return "admin/academyList";
+	   }
 
 	
 

@@ -18,13 +18,19 @@ $(document).ready(function(){
       // 버튼이 눌렸을 때
       $('.quickmenu').on('click',function(){
          //alert('0');
-         //alert($('#memberId').text());
+         alert($('#memberId').text());
       
-         var url = 'http://127.0.0.48:5000'
-         //var url = 'http://127.0.0.48:5000/?id=' + $('#memberId').text();
-         window.open(url,'width=100','height=100');
+      
+      
+       
+         var url = 'http://127.0.0.48:5000/?id=' + $('#memberId').text();
+         window.open(url,'width=20','height=60');
          
       
+      
+      
+	//<!-- 세션에서 찾는방법 -->
+	//<div><span id='memberId' th:text='${session["member"]}'>}</span>님로그인성공</div>
       });
       
       

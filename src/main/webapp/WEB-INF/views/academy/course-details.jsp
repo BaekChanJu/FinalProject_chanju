@@ -666,8 +666,8 @@
                                                    <div class="course__form-input">
                                                       <!--아이디값 저장 지금은 그냥 임의의 값 넣어줌-->
                                                       <!--참고로 re_id 는 시퀀스라 자동이고 날짜도 자동으로 들어가게 해놓음-->
-                                                      <input type="text" name="memIdString" value="bcj0825"  id = memIdString> <!-- "${sessionScope.memIdInt}"-->
-                                                      <input type="hidden" name="memIdInt" value="17"  id = memIdInt> <!-- "${sessionScope.memIdInt}"-->
+                                                      <input type="text" name="memIdString" value="bcj0825"  id = memIdString> <!-- "${sessionScope.memIdString}"-->
+                                                      <input type="hidden" name="memIdInt" value="1339"  id = memIdInt> <!-- "${sessionScope.memIdInt}"-->
                                                       
                                                    </div>
                                                 </div>

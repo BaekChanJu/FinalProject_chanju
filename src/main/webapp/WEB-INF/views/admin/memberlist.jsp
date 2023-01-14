@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ taglib prefix='c' uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -142,7 +142,6 @@
 
 </ul>
 <!-- End of Sidebar -->
-
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
 
@@ -153,9 +152,11 @@
                 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
                     <!-- Sidebar Toggle (Topbar) -->
-                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-                        <i class="fa fa-bars"></i>
-                    </button>
+                    <form class="form-inline">
+                        <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                    </form>
 
                     <!-- Topbar Search -->
                     <form
@@ -164,7 +165,7 @@
                             <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
                                 aria-label="Search" aria-describedby="basic-addon2">
                             <div class="input-group-append">
-                                <button class="btn btn-dark type="button">
+                                <button class="btn btn-primary" type="button">
                                     <i class="fas fa-search fa-sm"></i>
                                 </button>
                             </div>
@@ -353,71 +354,65 @@
                 </nav>
                 <!-- End of Topbar -->
 
-              
                 <!-- 목록페이지시작Begin Page Content -->
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">학원 목록</h1>
+                    <h1 class="h3 mb-2 text-gray-800">MemberList</h1>
                     <p class="mb-4"></p>
 
-                 
-                       <!-- 학원 목록 테이블 -->
-                       <div class="card shadow mb-4">
+                    <!-- 학원 목록 테이블 -->
+                    <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-dark">학원 목록</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">회원 목록</h6>
                         </div>
-                        <div>
                         <div class="card-body">
                             <div class="table-responsive">
-                                <table class="table table-bordered" id="dataTable" width="100%"   cellspacing="0">
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
-                                            <th>번호</th>
-                                            <th>교육과정제목</th>
-                                            <th>학원이름</th>
-                                            <th>수업개강일</th>
-                                            <th>수업종강일</th>
-                                            <th>카테고리 키워드</th>
-                                            <th>상태</th>
-                                            <th></th>
+                                            <th>회원고유번호</th>
+                                            <th>회원이름</th>
+                                            <th>전화번호</th>
+                                            <th>이메일</th>
+                                            <th>상태??</th>
+                                            
                                         </tr>
                                     </thead>
                                     <tfoot>
                                         <tr>
-                                            <th>번호</th>
-                                            <th>교육과정제목</th>
-                                            <th>학원이름</th>
-                                            <th>수업개강일</th>
-                                            <th>수업종강일</th>
-                                            <th>상태</th>
-                                            <th></th>
+                                            <th>회원고유번호</th>
+                                            <th>회원이름</th>
+                                            <th>전화번호</th>
+                                            <th>이메일</th>
+                                            <th>상태??</th>
                                         </tr>
                                     </tfoot>
                                     <tbody>
-                                        <c:forEach var='education' items='${result}'>
+                                        <!--누구야 여기서는 값 넣어야한다.-->
+                                        <c:forEach var='memberList' items='${result}'>
                                         <tr>
-                                        	<td>${education.edId}</td>
-                                        	<td class="edutd"><a href="/admin/academyRegister?edId=${education.edId}">${education.edTitle}</a></td>
-                                        	<td>${education.edName}</td>
-                                        	<td><fmt:formatDate value="${education.ed_start_date}" pattern="YYYY.MM.DD"/> </td>
-                                        	<td><fmt:formatDate value="${education.ed_end_date}" pattern="YYYY.MM.DD" /></td>
-                                            <td>${education.edKeyword}</td>
+                                            <td>${memberList.memIdInt}</td>
+                                            <td>${memberList.m_name}</td>
+                                        	<td>${memberList.m_tel}</td>
+                                            <td>${memberList.m_email}</td>
+                                        	<td>어떤 상태인지</td>
+                                           
                                             
-                                        	 <td style="text-align:center;">
+                                        	<!-- <td style="text-align:center;">
                                         	
-												<a href="수정하기"
+												<a href="academyModify?ed_id=${vo.ed_id}"
 												class="btn btn-info btn-circle btn-sm">
 													<i class="fas fa-info-circle" aria-hidden="true"></i>
 												</a>
-											</td>
+											</td>-->
 											<!-- 삭제 버튼 클릭시 클릭한 시퀀스에 해당하는 글 삭제 -->
-											<td style="text-align:center;">
-                                                <a href="deleteAcademy?ed_id=${vo.edId}" 
+											<!--<td style="text-align:center;">
+                                                <a href="deleteAcademy?ed_id=${vo.ed_id}" 
                                                 	class="btn btn-danger btn-circle btn-sm">
                                                     <i class="fas fa-trash" aria-hidden="true"></i>
                                                 </a>
-                                            </td>
+                                            </td>-->
                                         </tr>
                                         </c:forEach>
                                     </tbody>
@@ -431,15 +426,15 @@
 
             </div>
             <!-- End of Main Content -->
+
             <!-- Footer -->
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2021</span>
+                        <span>Copyright &copy; Your Website 2020</span>
                     </div>
                 </div>
             </footer>
-            
             <!-- End of Footer -->
 
         </div>
@@ -467,28 +462,28 @@
                 <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login">Logout</a>
+                    <a class="btn btn-primary" href="login.html">Logout</a>
                 </div>
             </div>
         </div>
     </div>
 
-       <!-- Bootstrap core JavaScript-->
-       <script src="/admin/vendor/jquery/jquery.min.js"></script>
-       <script src="/admin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-   
-       <!-- Core plugin JavaScript-->
-       <script src="/admin/vendor/jquery-easing/jquery.easing.min.js"></script>
-   
-       <!-- Custom scripts for all pages-->
-       <script src="/admin/js/sb-admin-2.min.js"></script>
-   
-       <!-- Page level plugins -->
-       <script src="/admin/vendor/datatables/jquery.dataTables.min.js"></script>
-       <script src="/admin/vendor/datatables/dataTables.bootstrap4.min.js"></script>
-   
-       <!-- Page level custom scripts -->
-       <script src="/admin/js/demo/datatables-demo.js"></script>
+    <!-- Bootstrap core JavaScript-->
+    <script src="../admin/vendor/jquery/jquery.min.js"></script>
+    <script src="../admin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="../admin/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="../admin/js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="../admin/vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="../admin/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="../admin/js/demo/datatables-demo.js"></script>
 
 </body>
 

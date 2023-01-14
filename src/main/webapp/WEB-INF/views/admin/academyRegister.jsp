@@ -142,7 +142,6 @@
 
 </ul>
 <!-- End of Sidebar -->
-
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
 
@@ -189,7 +188,7 @@
                                             placeholder="Search for..." aria-label="Search"
                                             aria-describedby="basic-addon2">
                                         <div class="input-group-append">
-                                            <button class="btn btn-primary" type="button">
+                                            <button class="btn btn-dark" type="button">
                                                 <i class="fas fa-search fa-sm"></i>
                                             </button>
                                         </div>
@@ -265,7 +264,7 @@
                                 </h6>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="../admin/img/undraw_profile_1.svg"
+                                        <img class="rounded-circle" src="/admin/img/undraw_profile_1.svg"
                                             alt="...">
                                         <div class="status-indicator bg-success"></div>
                                     </div>
@@ -277,7 +276,7 @@
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="../admin/img/undraw_profile_2.svg"
+                                        <img class="rounded-circle" src="/admin/img/undraw_profile_2.svg"
                                             alt="...">
                                         <div class="status-indicator"></div>
                                     </div>
@@ -289,7 +288,7 @@
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="../admin/img/undraw_profile_3.svg"
+                                        <img class="rounded-circle" src="/admin/img/undraw_profile_3.svg"
                                             alt="...">
                                         <div class="status-indicator bg-warning"></div>
                                     </div>
@@ -323,7 +322,7 @@
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
                                 <img class="img-profile rounded-circle"
-                                    src="../admin/img/undraw_profile.svg">
+                                    src="/admin/img/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -353,93 +352,93 @@
                 </nav>
                 <!-- End of Topbar -->
 
-              
-                <!-- 목록페이지시작Begin Page Content -->
+                <!-- Begin Page Content -->
                 <div class="container-fluid">
-
-                    <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">학원 목록</h1>
-                    <p class="mb-4"></p>
-
-                 
-                       <!-- 학원 목록 테이블 -->
-                       <div class="card shadow mb-4">
+                    <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-dark">학원 목록</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">교육과정 등록</h6>
                         </div>
-                        <div>
                         <div class="card-body">
                             <div class="table-responsive">
-                                <table class="table table-bordered" id="dataTable" width="100%"   cellspacing="0">
-                                    <thead>
-                                        <tr>
-                                            <th>번호</th>
-                                            <th>교육과정제목</th>
-                                            <th>학원이름</th>
-                                            <th>수업개강일</th>
-                                            <th>수업종강일</th>
-                                            <th>카테고리 키워드</th>
-                                            <th>상태</th>
-                                            <th></th>
+                            	<form action="" method="post">
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                
+                                    
+								<tbody id="itemRegisterTbl">
+                                        <tr> 
+                                            <td class="tblTitle" colspan="6" style="font-size: 16pt; font-weight: bold;">교육과정 정보</td> 
                                         </tr>
-                                    </thead>
-                                    <tfoot>
                                         <tr>
-                                            <th>번호</th>
-                                            <th>교육과정제목</th>
-                                            <th>학원이름</th>
-                                            <th>수업개강일</th>
-                                            <th>수업종강일</th>
-                                            <th>상태</th>
-                                            <th></th>
+                                            <th scope="row" colspan="2" style="width:20%;">교육과정 명</th>
+                                            <td class="iValue" colspan="4">${education.edTitle}</td>
                                         </tr>
-                                    </tfoot>
-                                    <tbody>
-                                        <c:forEach var='education' items='${result}'>
                                         <tr>
-                                        	<td>${education.edId}</td>
-                                        	<td class="edutd"><a href="/admin/academyRegister?edId=${education.edId}">${education.edTitle}</a></td>
-                                        	<td>${education.edName}</td>
-                                        	<td><fmt:formatDate value="${education.ed_start_date}" pattern="YYYY.MM.DD"/> </td>
-                                        	<td><fmt:formatDate value="${education.ed_end_date}" pattern="YYYY.MM.DD" /></td>
-                                            <td>${education.edKeyword}</td>
-                                            
-                                        	 <td style="text-align:center;">
-                                        	
-												<a href="수정하기"
-												class="btn btn-info btn-circle btn-sm">
-													<i class="fas fa-info-circle" aria-hidden="true"></i>
-												</a>
-											</td>
-											<!-- 삭제 버튼 클릭시 클릭한 시퀀스에 해당하는 글 삭제 -->
-											<td style="text-align:center;">
-                                                <a href="deleteAcademy?ed_id=${vo.edId}" 
-                                                	class="btn btn-danger btn-circle btn-sm">
-                                                    <i class="fas fa-trash" aria-hidden="true"></i>
-                                                </a>
-                                            </td>
+                                            <th scope="row" colspan="2" >교육과정 번호</th>
+                                            <td class="iValue" colspan="4"><input type="hidden" name="edId" value="${education.edId}"/>${education.edId}</td>
                                         </tr>
-                                        </c:forEach>
+                                        <tr>
+                                            <th scope="row"  colspan="2">학원명</th>
+                                            <td class="iValue" colspan="4"><input type="hidden" name="edName"  value="${education.edName}"/>${education.edName}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"  colspan="2">카테고리 키워드</th>
+                                            <td class="iValue" colspan="4"><input type="hidden" name="edKeyword" />${education.edKeyword}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"  colspan="2">교육과정 기간</th>
+                                            <td class="iValue" colspan="4"><input type="hidden" name="ed_start_date" />${education.ed_start_date} ~ ${education.ed_end_date}</td>
+                                        </tr>
+                                         <tr>
+                                            <th scope="row"  colspan="2" style="vertical-align: middle;">교육과정 사진</th>
+                                            <td class="iValue" id="addImg"  colspan="4">
+                                               <input type="file" name="file" id="input-file"/></td>
+                                        </tr>
+                                        <tr style="margin-bottom: -5px;">
+                                            <th scope="row" colspan="2" style="vertical-align: middle;" >교육과정 가격</th>  
+                                            <td class="iValue" colspan="4">${education.ed_price}원</td> 
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" colspan="2" style="vertical-align: middle;" >훈련비</th>
+                                            <td class="iValue" colspan="4">${education.ed_comm}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" colspan="2" style="vertical-align: middle;">소개내용</th>
+                                            <td colspan="4">${education.ed_intro}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" colspan="2" style="vertical-align: middle;">커리큘럼</th>
+                                            <td colspan="4">${education.ed_curriculum}</td>
+                                        </tr>
+                                   
+                                        <tr>
+                                            <td colspan="3" style="text-align: center;" >
+                                                <input type="submit" value="승인" style="background-color : #4e73df; width:70px; height:30px; font-size: 10pt; color: white; border-style: none; border-radius: 3px;" >
+                                                <input type="submit" value="거절" style="background-color : #4e73df; width:70px; height:30px; font-size: 10pt; color: white; border-style: none; border-radius: 3px;" >                                            </td>
+                                        </tr>
                                     </tbody>
                                 </table>
+                                </form>
                             </div>
                         </div>
                     </div>
+                    
 
                 </div>
+
+
                 <!-- /.container-fluid -->
 
             </div>
             <!-- End of Main Content -->
+
             <!-- Footer -->
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2021</span>
+                        <span>Copyright &copy; PetDo 2021</span>
                     </div>
                 </div>
             </footer>
-            
             <!-- End of Footer -->
 
         </div>
@@ -454,42 +453,42 @@
     </a>
 
     <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login">Logout</a>
-                </div>
-            </div>
-        </div>
-    </div>
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog"
+		aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">로그아웃</h5>
+					<button class="close" type="button" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">×</span>
+					</button>
+				</div>
+				<div class="modal-body" >로그아웃 하시겠습니까?</div>
+				<div class="modal-footer" style="height:75px;">
+					<button class="btn btn-secondary" type="button" style="border-radius: 10px;"
+						data-dismiss="modal">취소</button>
+					<a class="btn btn-primary" href="../logOut.do" style="border-radius: 10px;">로그아웃</a>
+				</div>
+			</div>
+		</div>
+	</div>
 
-       <!-- Bootstrap core JavaScript-->
-       <script src="/admin/vendor/jquery/jquery.min.js"></script>
-       <script src="/admin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-   
-       <!-- Core plugin JavaScript-->
-       <script src="/admin/vendor/jquery-easing/jquery.easing.min.js"></script>
-   
-       <!-- Custom scripts for all pages-->
-       <script src="/admin/js/sb-admin-2.min.js"></script>
-   
-       <!-- Page level plugins -->
-       <script src="/admin/vendor/datatables/jquery.dataTables.min.js"></script>
-       <script src="/admin/vendor/datatables/dataTables.bootstrap4.min.js"></script>
-   
-       <!-- Page level custom scripts -->
-       <script src="/admin/js/demo/datatables-demo.js"></script>
+   <!-- Bootstrap core JavaScript-->
+   <script src="/admin/vendor/jquery/jquery.min.js"></script>
+   <script src="/admin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+   <!-- Core plugin JavaScript-->
+   <script src="/admin/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+   <!-- Custom scripts for all pages-->
+   <script src="/admin/js/sb-admin-2.min.js"></script>
+
+   <!-- Page level plugins -->
+   <script src="/admin/vendor/chart.js/Chart.min.js"></script>
+
+   <!-- Page level custom scripts -->
+   <script src="/admin/js/demo/chart-area-demo.js"></script>
+   <script src="/admin/js/demo/chart-pie-demo.js"></script>
 
 </body>
-
-</html>

@@ -233,9 +233,13 @@
                                         </tr>
                                          <tr>
                                             <th scope="row" style="vertical-align: middle;">강사 사진등록</th>
+                                            
+                                            <c:if test = "${teacherRegister.teacherId != null}">
                                             <td class="iValue" id="addImg"  colspan="2">
                                                 <img src="../assets/img/course/${teacherRegister.tcPic}" alt="" width='300' height='300' ></td>
                                                 <input type="hidden" name="tcPic" value="${teacherRegister.tcPic}">
+                                            </c:if>  
+
                                         </tr>
                                         
                                         <!--히든존-->
@@ -244,12 +248,14 @@
 
 
                                         <tr>
+                                            <c:if test = "${teacherRegister.teacherId != null}">
                                             <td colspan="3" style="text-align: center;" >
                                                 <input type="submit" id= "t-btn" value="승인" 
                                                 style="background-color : #4e73df; width:70px; height:30px; font-size: 10pt; color: white; border-style: none; border-radius: 3px;" onclick="teacherBtn()">
                                                 <input type="submit" id= "f-btn" value="거절" 
                                                 style="background-color : #4e73df; width:70px; height:30px; font-size: 10pt; color: white; border-style: none; border-radius: 3px;" onclick="teacherBtn2()" > 
                                             </td>
+                                        </c:if>  
                                         </tr>
                                     </tbody>
 
